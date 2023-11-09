@@ -7,7 +7,7 @@ import { MailIcon } from "@heroicons/react/outline";
 import { LocationMarkerIcon } from "@heroicons/react/outline";
 import { PrinterIcon } from "@heroicons/react/outline";
 
-export default function Footer() {
+const Footer: React.FC = () => {
   const [, setValues] = React.useState<string>("");
   const [, setWasSubmitted] = React.useState<boolean>(false);
 
@@ -21,7 +21,7 @@ export default function Footer() {
     event.currentTarget.reset();
   };
   return (
-    <section className="bg-bd-blue w-fit px-4 md:px-[100px] py-4 md:py-[80px]">
+    <section className="bg-sakura-5 w-fit px-4 md:px-[100px] py-4 md:py-[80px]">
       <div className="w-full">
         <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-10">
           <div className="col-1">
@@ -141,4 +141,6 @@ export default function Footer() {
       </div>
     </section>
   );
-}
+};
+
+export default Footer;
