@@ -5,24 +5,20 @@ import React from "react";
 // import { Navigation } from "~/components/navigation";
 import "./globals.css";
 import Template from "./template";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 import Footer from "~/components/footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // import Sampling from "~/components/sampling";
 
-const inter = Inter({
+const inter = DM_Sans({
   style: ["normal"],
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-DM_Sans",
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
       <head />
@@ -37,4 +33,6 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

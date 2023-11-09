@@ -88,7 +88,7 @@ export default function SliderComponents() {
   };
   return (
     <section>
-      <div className="hidden md:block w-full md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
+      <div className="block w-full md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
         <Slider {...settings}>
           {/* {data?.map((val) => {
             return (
@@ -105,85 +105,6 @@ export default function SliderComponents() {
             );
           })} */}
 
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
-              </div>
-            </div>
-          </div>
-
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
-              </div>
-            </div>
-          </div>
-        </Slider>
-      </div>
-
-      <div className="block md:hidden w-full max-w-sm">
-        <Slider {...settings}>
-          {/* {data?.map((val) => {
-            // console.log(val.mobile_image);
-            return (
-              <div className="relative " key={`${val.id}`}>
-                <div className="banner relative aspect-w-4 aspect-h-3">
-                  <Image
-                    className="rounded-xl"
-                    src={`${val.mobile_image}`}
-                    alt={val.mobile_image}
-                    layout="fill"
-                  />
-                </div>
-              </div>
-            );
-          })} */}
           <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
             {React.createElement(Testimoni, {
               width: "25px",

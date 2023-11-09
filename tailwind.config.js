@@ -8,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "bd-blue": "#164895",
-        "bd-red": "#B92025",
-        "bd-dark": "#16171C",
-        "bd-grey": "#696969",
+        "sakura-5": "#ED859E",
+        "sakura-10": "#F296AC",
+        "sakura-100": "#F031A4",
+        "sakura-brown": "#5B3819",
       },
     },
   },
