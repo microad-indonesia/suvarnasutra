@@ -15,7 +15,7 @@ export default function Head({ router }: AppProps) {
     <>
       <title>Suvanasutra</title>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/logo-ss.png" />
       <DefaultSeo
         canonical={`${meta.url}${router.asPath || "/"}`}
         // description={meta.description}
@@ -36,7 +36,7 @@ export default function Head({ router }: AppProps) {
         }}
         // title={meta.tagline}
         titleTemplate={`%s | ${meta.siteName}`}
-        facebook={{ appId: "Belidomain" }}
+        facebook={{ appId: "suvarnasutra" }}
       />
     </>
   );

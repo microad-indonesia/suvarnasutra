@@ -40,14 +40,14 @@ export default function SliderComponents() {
     dots: true,
     infinite: true,
     speed: 1500,
-    slidesToShow: 3,
+    slidesToShow: 1,
     slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1440,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -55,8 +55,8 @@ export default function SliderComponents() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -87,7 +87,7 @@ export default function SliderComponents() {
     nextArrow: <SamplePrevArrow />,
   };
   return (
-    <section>
+    <section className="relative">
       <div className="block w-full md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
         <Slider {...settings}>
           {/* {data?.map((val) => {
@@ -105,7 +105,7 @@ export default function SliderComponents() {
             );
           })} */}
 
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
+          <div className="bg-white shadow-xl rounded-xl p-8 w-full min-w-[640px]">
             {React.createElement(Testimoni, {
               width: "25px",
               height: "20px",
@@ -125,7 +125,7 @@ export default function SliderComponents() {
             </div>
           </div>
 
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
+          <div className="bg-white shadow-xl rounded-xl p-8 w-full min-w-[640px]">
             {React.createElement(Testimoni, {
               width: "25px",
               height: "20px",
@@ -145,7 +145,7 @@ export default function SliderComponents() {
             </div>
           </div>
 
-          <div className=" shadow-xl rounded-xl p-8 max-w-[420px]">
+          <div className="bg-white shadow-xl rounded-xl w-full p-8 min-w-[640px]">
             {React.createElement(Testimoni, {
               width: "25px",
               height: "20px",

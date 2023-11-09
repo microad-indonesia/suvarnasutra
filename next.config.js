@@ -4,10 +4,9 @@ const nextConfig = {
   // experimental: {
   //   appDir: true,
   // },
-  // images: {
-  //   domains: ["assets.vercel.com"],
-  //   formats: ["image/webp", "image/png"],
-  // },
+  images: {
+    formats: ["image/avif", "image/webp"],
+  },
 };
 
 module.exports = nextConfig;

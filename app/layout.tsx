@@ -4,7 +4,6 @@ import React from "react";
 // import Link from "next/link";
 // import { Navigation } from "~/components/navigation";
 import "./globals.css";
-import Template from "./template";
 import { DM_Sans } from "next/font/google";
 import Footer from "~/components/footer";
 import "slick-carousel/slick/slick.css";
@@ -18,18 +17,20 @@ const inter = DM_Sans({
   variable: "--font-DM_Sans",
 });
 
-const RootLayout = ({ children }: { children: React.ReactNode }) => {
+type layoutProps = { children: React.ReactNode };
+
+const RootLayout = ({ children }: layoutProps) => {
   return (
     <html>
       <head />
-      <body>
+      <body className="flex flex-col items-center mx-auto min-w-7xl min-h-screen bg-slate-50">
         <main className={`${inter.variable} font-sans`}>
           {/* <nav>
             <Navigation />
           </nav> */}
-          <Template>{children}</Template>
+          {children}
+          <Footer />
         </main>
-        <Footer />
       </body>
     </html>
   );

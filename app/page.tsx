@@ -9,6 +9,11 @@ import { Listbox, Transition } from "@headlessui/react";
 import { CheckIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { useSearchParams } from "next/navigation";
 import SliderComponents from "~/components/testimoni-slider";
+import HomeBanner from "~/public/assets/page-banner.png";
+import GiftCard from "~/public/assets/special-gift.png";
+import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
+import BasantaHeadBanner from "~/public/assets/Basanta_Head_Banner.jpg";
+import CloudLong from "~/public/assets/cloud-long.png";
 
 const rangeAge = [
   { AgeRange: "--select--" },
@@ -64,39 +69,58 @@ export default function HomePage() {
         ...mergedObject,
         PageFrom: "basanta-external",
       };
+      // const URLEncode = new URLSearchParams(mergingResult).toString();
+      const URLEncode: string = new URLSearchParams(mergingResult).toString();
+      console.log("form", URLEncode);
 
-      console.log("form", mergingResult);
+      // const response = await fetch(`${process.env.NEXT_PUBLIC_SUBMIT}`, {
+      //   method: "POST",
+      //   // body: JSON.stringify(mergingResult),
+      //   body: URLEncode,
+      //   headers: {
+      //     Authorization: `Basic ${process.env.NEXT_PUBLIC_TOKEN}`,
+      //     "Content-Type": "application/x-www-form-urlencoded",
+      //   },
+      // });
+
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_URL}/api/campaign`,
+        {
+          method: "POST",
+          body: JSON.stringify(mergingResult),
+        },
+      );
+      const resp = await response.statusText;
+      console.log("resp", resp);
       setWasSubmitted(true);
 
-      event.currentTarget.reset();
+      // event.currentTarget.reset();
     } catch (error) {
       console.log("err", error);
     }
   };
+
   return (
     <>
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
 
       {/* homebanner  */}
-      <section className="relative bg-transparant h-[40vh] w-full">
-        <p>Hallo papa ini mama</p>
-        <div className="flex justify-center ">
-          <Image
-            src={`/assets/special-gift.png`}
-            alt="form-image"
-            width={674}
-            height={209}
-          />
-        </div>
+      <section className="relative h-[760px] w-full">
+        <figure className="absolute bottom-4 inset-x-0 flex justify-center z-20">
+          <Image src={GiftCard} alt="form-image" width={674} height={209} />
+        </figure>
+        <figure className="absolute inset-0 object-cover bg-center bg-no-repeat w-full h-full aspect-video">
+          <Image src={HomeBanner} alt="banner" />
+        </figure>
       </section>
 
       {/* form */}
-      <section className="relative w-full h-fit">
-        <div className="bg-rose-400/60 absolute w-full h-[75vh] blur-md"></div>
+      <section className="relative bg-sakura-5 w-full h-[760px]">
+        <div className="bg-sakura-5 absolute inset-0 w-full h-full blur-md"></div>
 
-        <div className="flex justify-center items-center mx-[76px]">
+        <div className="relative flex justify-center items-center mx-[76px]">
           {/* form */}
-          <div className="flex-inital z-10 bg-sakura-5/70 px-9 py-16 rounded-2xl">
+          <div className="flex-inital z-10 bg-sakura-10 p-16 rounded-2xl">
             <div className="mb-4 w-full">
               <h5 className="font-medium text-xl leading-6 text-slate-200">
                 Silahkan Mengisi Form
@@ -106,7 +130,11 @@ export default function HomePage() {
               </p>
             </div>
 
-            <form onSubmit={handleForm} action="">
+            <form
+              onSubmit={handleForm}
+              encType={"application/x-www-form-urlencoded"}
+              method="post"
+            >
               <div className="space-y-1 md:space-y-5">
                 {/* name and lastname */}
                 <div className="flex justify-between items-center">
@@ -303,36 +331,46 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-transparant my-10">
-        <div className="flex flex-col justify-center items-center mx-auto">
-          <p className="paragraph font-medium text-sakura-brown">
+      <section className="relative w-full h-full py-10">
+        <Image
+          className="absolute inset-0 object-cover bg-no-repeat"
+          src={CloudLong}
+          alt="banner"
+          width={1440}
+          height={420}
+        />
+
+        <div className="relative">
+          <h1 className="heading font-medium text-sakura-brown text-center">
             Yang kamu Dapatkan dari
-          </p>
-          <SliderComponents />
+          </h1>
+          <div className="flex items-center justify-center">
+            <SliderComponents />
+          </div>
         </div>
-      </section>
 
-      <section className="">
-        <figure>
-          <Image
-            src={`/assets/Basanta_Head_Banner.jpg `}
-            alt="banner"
-            width={1440}
-            height={420}
-          />
-        </figure>
+        <div className="relative">
+          <figure>
+            <Image
+              src={BasantaHeadBanner}
+              alt="banner"
+              width={1440}
+              height={420}
+            />
+          </figure>
 
-        <div className="flex items-center justify-center">
-          <SliderComponents />
+          <div className="flex items-center justify-center">
+            <SliderComponents />
+          </div>
         </div>
       </section>
 
       {/* end promo */}
-      <section className="relative mt-20">
-        <div className="absolute inset-0 bg-sakura-10/50"></div>
-        <figure className="">
+      <section className="relative bg-sakura-10/60 mt-20">
+        <figure className="w-full h-full">
           <Image
-            src={"/assets/Basanta_Cluster_Promo.png"}
+            className="mix-blend-overlay object-cover"
+            src={BasantaClusterPromo}
             alt="promo_image"
             width={1440}
             height={341}
@@ -340,12 +378,7 @@ export default function HomePage() {
         </figure>
         <div className="absolute bottom-4 translate-x-1/3 flex justify-between items-center gap-x-10">
           <figure>
-            <Image
-              src={`/assets/special-gift.png`}
-              alt="form-image"
-              width={674}
-              height={209}
-            />
+            <Image src={GiftCard} alt="form-image" width={674} height={209} />
           </figure>
 
           <button className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-6 py-2 rounded-2xl text-slate-50">
