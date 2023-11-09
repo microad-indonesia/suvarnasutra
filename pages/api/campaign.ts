@@ -10,7 +10,7 @@ export default async function handler(
 ) {
   // Get data submitted in request's body.
   const body: any = req.body;
-  console.log("body: ", body);
+  // console.log("body: ", body);
   if (!body.FirstName || !body.Email) {
     // Sends a HTTP bad request error code
     return res?.status(400).json({ data: "name or email not found" });
@@ -18,24 +18,22 @@ export default async function handler(
 
   const test = {
     AgeRange: "25-34",
-    Email: "juzo@suzuya.com",
     FirstName: "juzo",
     LastName: "hahaha",
-    Message: "adadadad",
+    Email: "juzo@suzuya.com",
+    Message: "test send message from new landingpage",
     PageFrom: "basanta-external",
-    PhoneNumbe: "09099989",
+    PhoneNumber: "6285760886989",
   };
 
-  await axios.post(
-    `${process.env.POST_URL}`,
-    { test },
-    {
-      headers: {
-        Authorization: `Basic ${process.env.TOKEN}`,
-        "Content-Type": "application/json",
-      },
-    },
-  );
+  // const URLEncode: string = new URLSearchParams(test).toString();
 
-  return res?.status(200).json(body);
+  await axios.post(`${process.env.POST_URL}`, test, {
+    headers: {
+      Authorization: `Basic ${process.env.TOKEN}`,
+      "Content-Type": "application/json",
+    },
+  });
+
+  return res?.status(200);
 }

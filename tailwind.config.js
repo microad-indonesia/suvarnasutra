@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        "sakura-5": "#ED859E",
-        "sakura-10": "#F296AC",
+        "sakura-5": "#FFDFDF",
+        "sakura-10": "#F296AC8A",
         "sakura-100": "#F031A4",
         "sakura-brown": "#5B3819",
       },
