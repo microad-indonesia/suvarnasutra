@@ -16,24 +16,25 @@ export default async function handler(
     return res?.status(400).json({ data: "name or email not found" });
   }
 
-  const test = {
-    AgeRange: "25-34",
-    FirstName: "juzo",
-    LastName: "hahaha",
-    Email: "juzo@suzuya.com",
-    Message: "test send message from new landingpage",
-    PageFrom: "basanta-external",
-    PhoneNumber: "6285760886989",
-  };
+  // const test = {
+  //   AgeRange: "25-34",
+  //   FirstName: "juzo",
+  //   LastName: "hahaha",
+  //   Email: "juzo@suzuya.com",
+  //   Message: "test send message from new landingpage",
+  //   PageFrom: "basanta-external",
+  //   PhoneNumber: "6285760886989",
+  // };
 
   // const URLEncode: string = new URLSearchParams(test).toString();
 
-  await axios.post(`${process.env.POST_URL}`, test, {
+  await axios.post(`${process.env.POST_URL}`, body, {
     headers: {
-      Authorization: `Basic ${process.env.TOKEN}`,
-      "Content-Type": "application/json",
+      Authorization: `Bearer ${process.env.TOKEN}`,
+      "Content-Type": "application/x-www-form-urlencoded",
+      "Cache-Control": "no-cache",
     },
   });
 
-  return res?.status(200);
+  return res?.status(200).json(body);
 }

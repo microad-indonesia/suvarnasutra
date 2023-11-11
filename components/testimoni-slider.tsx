@@ -5,22 +5,41 @@
 
 import * as React from "react";
 import Slider from "react-slick";
-import { Testimoni } from "./icons";
-// import Image from "next/image";
+import Image from "next/image";
+
+// unit rumah bloom
+import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/Denah-Rumah.png";
+import Denah1 from "~/public/assets/Unit-Rumah/The-bloom/Denah-1.png";
+import Denah2 from "~/public/assets/Unit-Rumah/The-bloom/Denah-2.png";
+import LogoBloom from "~/public/assets/Unit-Rumah/The-bloom/Tipe-Bloom-1.png";
+
+// unit rumah bellflower
+import HomeImageBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Image-Rumah.png";
+import Denah1Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-1.png";
+import Denah2Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-2.png";
+import LogoBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Logo.png";
+
+// unit rumah burnet
+import HomeImageBurnet from "~/public/assets/Unit-Rumah/The-burnet/Image-Rumah.png";
+import Denah1Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-1.png";
+import Denah2Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-2.png";
+import LogoBurnet from "~/public/assets/Unit-Rumah/The-burnet/Logo.png";
+import { Unit1, Unit2, Unit3, Unit4, Unit5 } from "./icons";
+
 // import { DataProps } from "~/pages";
 
-export type DataProps = {
-  data: {
-    readonly created_at?: string;
-    readonly id?: number;
-    readonly image: string;
-    readonly link?: null;
-    readonly mobile_image: string;
-    readonly sequence?: string;
-    readonly status?: string;
-    readonly updated_at?: string;
-  }[];
-};
+// export type DataProps = {
+//   data: {
+//     readonly created_at?: string;
+//     readonly id?: number;
+//     readonly image: string;
+//     readonly link?: null;
+//     readonly mobile_image: string;
+//     readonly sequence?: string;
+//     readonly status?: string;
+//     readonly updated_at?: string;
+//   }[];
+// };
 
 function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
@@ -39,48 +58,10 @@ export default function SliderComponents() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 1500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1440,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true,
-        },
-      },
-    ],
+    row: 3,
     autoplay: true,
     cssEase: "linear",
     prevArrow: <SamplePrevArrow />,
@@ -88,79 +69,253 @@ export default function SliderComponents() {
   };
   return (
     <section className="relative">
-      <div className="block w-full md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
+      <div className="block max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
         <Slider {...settings}>
-          {/* {data?.map((val) => {
-            return (
-              <div className="relative " key={`${val.id}`}>
-                <div className="banner relative aspect-w-16 aspect-h-6">
+          {/* Bellflower */}
+          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+            <div className="flex flex-wrap justify-evenly">
+              <div className="flex-initial">
+                <figure className="w-full h-fit">
                   <Image
-                    className="rounded-xl"
-                    src={`${val.image}`}
-                    alt={val.image}
-                    layout="fill"
+                    src={HomeImageBellflower}
+                    alt="denah-rumah-bellflower"
+                    width={457}
+                    height={524}
                   />
+                </figure>
+              </div>
+
+              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
+                <div className="space-y-4">
+                  <figure className="w-fit h-fit">
+                    <Image
+                      src={LogoBellflower}
+                      alt="logo-bellflower"
+                      width={185}
+                      height={64}
+                    />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    LT : 96 m² (8x12)
+                  </p>
+                  <p className="paragraph text-sakura-brown">LB : 122 m²</p>
+                </div>
+
+                {/* list facilities */}
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit1, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>4+1 KT</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit2, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>3+1 KM</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit3, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>1 WALK IN CLOSET</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit4, {
+                      width: "50px",
+                      height: "20px",
+                    })}
+                    <p>2 MOBIL</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit5, {
+                      width: "48px",
+                      height: "35px",
+                    })}
+                    <p>1 MOTOR</p>
+                  </div>
                 </div>
               </div>
-            );
-          })} */}
 
-          <div className="bg-white shadow-xl rounded-xl p-8 w-full min-w-[640px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
+              <div className="flex items-center mt-3 md:mt-0">
+                <figure className="flex-1 w-full h-fit">
+                  <Image
+                    src={Denah1Bellflower}
+                    alt="denah-rumah-bellflower-1"
+                  />
+                </figure>
+                <figure className="flex-1 w-full h-fit">
+                  <Image
+                    src={Denah2Bellflower}
+                    alt="denah-rumah-bellflower-2"
+                  />
+                </figure>
               </div>
             </div>
           </div>
 
-          <div className="bg-white shadow-xl rounded-xl p-8 w-full min-w-[640px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
+          {/* Bloom done */}
+          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+            <div className="flex flex-wrap justify-evenly">
+              <div className="flex-initial">
+                <figure className="w-full h-fit">
+                  <Image
+                    src={HomeImage}
+                    alt="denah-rumah-bloom"
+                    width={457}
+                    height={524}
+                  />
+                </figure>
+              </div>
+
+              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
+                <div className="space-y-4">
+                  <figure className="w-fit h-fit">
+                    <Image
+                      src={LogoBloom}
+                      alt="logo-bloom"
+                      width={185}
+                      height={64}
+                    />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    LT : 72 m² (6x12)
+                  </p>
+                  <p className="paragraph text-sakura-brown">LB : 87 m²</p>
+                </div>
+
+                {/* list facilities */}
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit1, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>3 KT</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit2, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>3 KM</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit3, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>1 WALK IN CLOSET</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit4, {
+                      width: "50px",
+                      height: "20px",
+                    })}
+                    <p>1 MOBIL</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit5, {
+                      width: "48px",
+                      height: "35px",
+                    })}
+                    <p>1 MOTOR</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center mt-3 md:mt-0">
+                <figure className="flex-1 w-full h-fit">
+                  <Image src={Denah1} alt="denah-rumah-bloom-1" />
+                </figure>
+                <figure className="flex-1 w-full h-fit">
+                  <Image src={Denah2} alt="denah-rumah-bloom-2" />
+                </figure>
               </div>
             </div>
           </div>
 
-          <div className="bg-white shadow-xl rounded-xl w-full p-8 min-w-[640px]">
-            {React.createElement(Testimoni, {
-              width: "25px",
-              height: "20px",
-            })}
-            <p className="paragraph text-bd-grey my-11">
-              Customer service Belidomain.co.id sangat bisa diandalkan. Sangat
-              responsif, informatif, dan membantu. Masalah saya bisa diatasi
-              dengan cepat dan tuntas.
-            </p>
-            <div className="flex item center gap-x-5 my-5">
-              {/*  */}
-              <div className="bg-bd-blue rounded-full w-11 h-11"></div>
-              <div className="">
-                <p className="paragraph">Padaz Store</p>
-                <p className="paragraph">Toko Online</p>
+          {/* Burnet */}
+          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+            <div className="flex flex-wrap justify-evenly">
+              <div className="flex-initial">
+                <figure className="w-full h-fit">
+                  <Image
+                    src={HomeImageBurnet}
+                    alt="denah-rumah-burnet"
+                    width={457}
+                    height={524}
+                  />
+                </figure>
+              </div>
+
+              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
+                <div className="space-y-4">
+                  <figure className="w-fit h-fit">
+                    <Image
+                      src={LogoBurnet}
+                      alt="logo-burnet"
+                      width={185}
+                      height={64}
+                    />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    LT : 84 m² (7x12)
+                  </p>
+                  <p className="paragraph text-sakura-brown">LB : 101 m²</p>
+                </div>
+
+                {/* list facilities */}
+                <div className="flex-1 space-y-4">
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit1, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>3 KT</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit2, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>3 KM</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit3, {
+                      width: "46px",
+                      height: "37px",
+                    })}
+                    <p>1 WALK IN CLOSET</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit4, {
+                      width: "50px",
+                      height: "20px",
+                    })}
+                    <p>2 MOBIL</p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    {React.createElement(Unit5, {
+                      width: "48px",
+                      height: "35px",
+                    })}
+                    <p>1 MOTOR</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex items-center mt-3 md:mt-0">
+                <figure className="flex-1 w-full h-fit">
+                  <Image src={Denah1Burnet} alt="denah-rumah-burnet-1" />
+                </figure>
+                <figure className="flex-1 w-full h-fit">
+                  <Image src={Denah2Burnet} alt="denah-rumah-burnet-2" />
+                </figure>
               </div>
             </div>
           </div>
