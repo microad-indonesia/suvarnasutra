@@ -8,8 +8,8 @@ import LogoWhite from "~/public/logo-white.png";
 const Footer: React.FC = () => {
   return (
     <>
-      <section className="bg-sakura-10 w-fit px-4 md:px-[100px] py-4 md:py-[80px]">
-        <div className="flex items-end gap-4">
+      <section className="bg-sakura-10 w-full px-4 md:px-[100px] py-4 md:py-[80px] mx-auto">
+        <div className="flex flex-col md:flex-row items-start md:items-end justify-center gap-4">
           {/* logo */}
           <div className="flex-1">
             <Image src={LogoWhite} width={103} height={114} alt="logo-white" />

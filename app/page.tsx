@@ -13,7 +13,31 @@ import HomeBanner from "~/public/assets/page-banner.png";
 import GiftCard from "~/public/assets/special-gift.png";
 import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
 import BasantaHeadBanner from "~/public/assets/Basanta_Head_Banner.jpg";
-import CloudLong from "~/public/assets/cloud-long.png";
+// import CloudLong from "~/public/assets/cloud-long.png";
+import BasanthaImage from "~/public/assets/basanta/Logo-Basantha-Color-1.png";
+import LogoColor from "~/public/logo-ss.png";
+import TitleImage from "~/public/assets/title.png";
+import SubtitleImage from "~/public/assets/subtitle.png";
+import { PhoneIcon } from "@heroicons/react/outline";
+import axios from "axios";
+import BenefitSlider from "~/components/page-component/benefit-slider";
+
+// benefit
+import Bene1 from "~/public/assets/benefit/Group-5.png";
+import Bene2 from "~/public/assets/benefit/Group-1.png";
+import Bene3 from "~/public/assets/benefit/Group-6.png";
+import Bene4 from "~/public/assets/benefit/Group-4.png";
+import Bene5 from "~/public/assets/benefit/Group-3.png";
+import Bene6 from "~/public/assets/benefit/Group-2.png";
+import BfDeret from "~/public/assets/Unit-Rumah/BellflowerDeret.png";
+
+// fitur
+import Feat1 from "~/public/assets/facilities/Group-6.png";
+import Feat2 from "~/public/assets/facilities/Group-3.png";
+import Feat3 from "~/public/assets/facilities/Group-1.png";
+import Feat4 from "~/public/assets/facilities/Group-4.png";
+import Feat5 from "~/public/assets/facilities/Group-2.png";
+import Feat6 from "~/public/assets/facilities/Group-5.png";
 
 const rangeAge = [
   { AgeRange: "--select--" },
@@ -69,32 +93,16 @@ export default function HomePage() {
         ...mergedObject,
         PageFrom: "basanta-external",
       };
-      // const URLEncode = new URLSearchParams(mergingResult).toString();
       const URLEncode: string = new URLSearchParams(mergingResult).toString();
-      console.log("form", URLEncode);
-
-      // const response = await fetch(`${process.env.NEXT_PUBLIC_SUBMIT}`, {
-      //   method: "POST",
-      //   // body: JSON.stringify(mergingResult),
-      //   body: URLEncode,
-      //   headers: {
-      //     Authorization: `Basic ${process.env.NEXT_PUBLIC_TOKEN}`,
-      //     "Content-Type": "application/x-www-form-urlencoded",
-      //   },
-      // });
-
-      const response = await fetch(
+      event.currentTarget.reset();
+      const response = await axios.post(
         `${process.env.NEXT_PUBLIC_URL}/api/campaign`,
-        {
-          method: "POST",
-          body: JSON.stringify(mergingResult),
-        },
+        URLEncode,
       );
-      const resp = await response.statusText;
+      const resp = await response.status;
       console.log("resp", resp);
-      setWasSubmitted(true);
 
-      // event.currentTarget.reset();
+      setWasSubmitted(true);
     } catch (error) {
       console.log("err", error);
     }
@@ -105,27 +113,67 @@ export default function HomePage() {
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
 
       {/* homebanner  */}
-      <section className="relative h-[760px] w-full">
-        <figure className="absolute bottom-4 inset-x-0 flex justify-center z-20">
-          <Image src={GiftCard} alt="form-image" width={674} height={209} />
+      <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40">
+        <div className="absolute -left-8 md:-left-0 h-fit inset-0 flex justify-between items-center mx-0 md:mx-10 gap-1 md:gap-4">
+          {/* logo */}
+          <div className="flex-1">
+            <div className="flex items-center">
+              <figure className="w-fit h-fit">
+                <Image src={LogoColor} alt="Logo" />
+              </figure>
+            </div>
+          </div>
+
+          {/* title */}
+          <div className="flex-1">
+            <div className="flex flex-col items-center justify-center">
+              <figure className="w-fit h-fit">
+                <Image src={TitleImage} alt="title" />
+              </figure>
+              <figure className="w-fit h-fit">
+                <Image src={SubtitleImage} alt="subtitle" />
+              </figure>
+            </div>
+          </div>
+
+          {/* phone */}
+          <div className="flex-1">
+            <a className="flex items-end justify-end" href="tel:02131103838">
+              <button className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-2 md:px-6 py-2 rounded-full text-slate-50 inline-flex items-center gap-2 text-[8px] md:text-base">
+                <figure className="w-[19px] h-[18px]">
+                  <PhoneIcon />
+                </figure>
+                (021) 31103838
+              </button>
+            </a>
+          </div>
+        </div>
+
+        <figure className="absolute bottom-0 inset-x-0 flex justify-center z-20">
+          <Image src={GiftCard} alt="promo" />
         </figure>
-        <figure className="absolute inset-0 object-cover bg-center bg-no-repeat w-full h-full aspect-video">
-          <Image src={HomeBanner} alt="banner" />
+
+        <figure className="w-full h-full">
+          <Image
+            className="object-cover bg-center bg-no-repeat"
+            src={HomeBanner}
+            alt="banner"
+          />
         </figure>
       </section>
 
       {/* form */}
-      <section className="relative bg-sakura-5 w-full h-[760px]">
-        <div className="bg-sakura-5 absolute inset-0 w-full h-full blur-md"></div>
+      <section className="relative h-auto md:h-[760px] w-[320px] md:w-full my-6 md:my-0">
+        <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
 
-        <div className="relative flex justify-center items-center mx-[76px]">
+        <div className="relative mx-8 md:mx-0 flex justify-center items-center mt-0 md:mt-10">
           {/* form */}
-          <div className="flex-inital z-10 bg-sakura-10 p-16 rounded-2xl">
-            <div className="mb-4 w-full">
-              <h5 className="font-medium text-xl leading-6 text-slate-200">
+          <div className="flex-initial z-10 bg-sakura-10 p-8 md:p-16 rounded-2xl min-w-[360px]">
+            <div className="mb-4 w-full text-center">
+              <h5 className="font-medium text-xl leading-6">
                 Silahkan Mengisi Form
               </h5>
-              <p className="paragraph text-slate-200 mt-2">
+              <p className="paragraph mt-2">
                 Untuk mendapatkan informasi mengenai produk
               </p>
             </div>
@@ -135,9 +183,9 @@ export default function HomePage() {
               encType={"application/x-www-form-urlencoded"}
               method="post"
             >
-              <div className="space-y-1 md:space-y-5">
+              <div className="space-y-3 md:space-y-5">
                 {/* name and lastname */}
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap justify-between items-center">
                   <div className="space-y-1">
                     <label
                       htmlFor="FirstName"
@@ -155,6 +203,7 @@ export default function HomePage() {
                         onChange={(event) =>
                           setValues(event.currentTarget.value)
                         }
+                        required
                       />
                     </div>
                   </div>
@@ -176,6 +225,7 @@ export default function HomePage() {
                         onChange={(event) =>
                           setValues(event.currentTarget.value)
                         }
+                        required
                       />
                     </div>
                   </div>
@@ -202,7 +252,7 @@ export default function HomePage() {
                 </div>
 
                 {/* phone & age-range */}
-                <div className="flex justify-between items-center">
+                <div className="flex flex-wrap justify-between items-center">
                   <div className="space-y-1">
                     <label
                       htmlFor="PhoneNumber"
@@ -222,6 +272,7 @@ export default function HomePage() {
                         onChange={(event) =>
                           setValues(`+62${event.currentTarget.value}`)
                         }
+                        required
                       />
                     </div>
                   </div>
@@ -307,12 +358,13 @@ export default function HomePage() {
                     placeholder="your message"
                     cols={3}
                     onChange={(event) => setValues(event.currentTarget.value)}
+                    required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-6 py-2 rounded-2xl text-slate-50"
+                  className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-6 py-2 rounded-2xl text-slate-50 "
                 >
                   Submit
                 </button>
@@ -320,7 +372,7 @@ export default function HomePage() {
             </form>
           </div>
 
-          <figure className="hidden md:block flex-1 z-10">
+          <figure className="sr-only md:not-sr-only flex-initial w-full h-full z-10">
             <Image
               src={`/assets/BellflowerDeret_1.png`}
               alt="form-image"
@@ -331,57 +383,154 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative w-full h-full py-10">
-        <Image
-          className="absolute inset-0 object-cover bg-no-repeat"
-          src={CloudLong}
-          alt="banner"
-          width={1440}
-          height={420}
-        />
+      <section className="relative h-auto w-[360px] md:w-full mt-10">
+        <div className="">
+          <div className="flex flex-col justify-center items-center gap-4">
+            <h1 className="heading font-medium text-sakura-brown text-center">
+              Yang kamu Dapatkan dari
+            </h1>
+            <figure>
+              <Image
+                src={BasanthaImage}
+                alt="banner"
+                width={357}
+                height={105}
+              />
+            </figure>
+          </div>
 
-        <div className="relative">
-          <h1 className="heading font-medium text-sakura-brown text-center">
-            Yang kamu Dapatkan dari
-          </h1>
           <div className="flex items-center justify-center">
-            <SliderComponents />
+            <BenefitSlider />
           </div>
         </div>
 
-        <div className="relative">
-          <figure>
-            <Image
-              src={BasantaHeadBanner}
-              alt="banner"
-              width={1440}
-              height={420}
-            />
+        {/* slider for unit rumah */}
+        <div className="space-y-10">
+          <figure className="w-full h-fit">
+            <Image src={BasantaHeadBanner} alt="banner" />
           </figure>
 
-          <div className="flex items-center justify-center">
+          <div className="flex flex-col items-center justify-center">
+            <h1 className="heading font-medium text-sakura-brown text-center">
+              Unit Rumah
+            </h1>
             <SliderComponents />
           </div>
         </div>
+
+        {/* fitur rumah */}
+        <div className="flex flex-col items-center justify-center gap-6">
+          <h1 className="heading font-medium text-sakura-brown text-center">
+            Fitur Rumah
+          </h1>
+
+          {/* fitur komplek */}
+          <div className="grid grid-cols-3 md:grid-cols-6 place-items-center grid-flow-row gap-4">
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene1} alt="benefit1" />
+            </figure>
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene2} alt="benefit2" />
+            </figure>
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene3} alt="benefit3" />
+            </figure>
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene4} alt="benefit4" />
+            </figure>
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene5} alt="benefit5" />
+            </figure>
+            <figure className="w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+              <Image src={Bene6} alt="benefit6" />
+            </figure>
+          </div>
+
+          <div className="space-y-4">
+            <figure className="w-full h-fit rounded-2xl">
+              <Image src={BfDeret} alt="bellflower-deret" />
+            </figure>
+
+            <div className="grid grid-cols-2 place-items-stretch grid-flow-row gap-4">
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat1} alt="benefit-1" />
+                </figure>
+                <p className="paragraph text-sakura-brown">
+                  Dekat Dengan Tol Jakarta-Tangerang
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat2} alt="benefit-2" />
+                </figure>
+                <p className="paragraph text-sakura-brown">Ruang Serbaguna</p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat3} alt="benefit-3" />
+                </figure>
+                <p className="paragraph text-sakura-brown">
+                  Taman Bermain Anak
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat4} alt="benefit-4" />
+                </figure>
+                <p className="paragraph text-sakura-brown">
+                  Kolam Renang Anak & Dewasa
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat5} alt="benefit-5" />
+                </figure>
+                <p className="paragraph text-sakura-brown">
+                  Lapangan Basket 3 on 3
+                </p>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <figure className="w-fit h-fit">
+                  <Image src={Feat6} alt="benefit-6" />
+                </figure>
+                <p className="paragraph text-sakura-brown">Area Komersil</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* <figure className="w-full h-full aspect-square md:aspect-video">
+          <Image
+            className="object-cover bg-center bg-repeat-y"
+            src={CloudLong}
+            alt="banner-cloud"
+          />
+        </figure> */}
       </section>
 
       {/* end promo */}
-      <section className="relative bg-sakura-10/60 mt-20">
-        <figure className="w-full h-full">
+      <section className="relative block bg-sakura-10/60 mt-10 h-auto md:h-fit w-[360px] md:w-full">
+        <figure className="w-full h-fit">
           <Image
-            className="mix-blend-overlay object-cover"
+            className="mix-blend-overlay object-cover bg-center bg-no-repeat"
             src={BasantaClusterPromo}
             alt="promo_image"
             width={1440}
             height={341}
           />
         </figure>
-        <div className="absolute bottom-4 translate-x-1/3 flex justify-between items-center gap-x-10">
-          <figure>
-            <Image src={GiftCard} alt="form-image" width={674} height={209} />
+        <div className="absolute bottom-4 translate-x-0 md:translate-x-1/3 flex justify-between items-center gap-x-10">
+          <figure className="w-full h-fit">
+            <Image src={GiftCard} alt="form-image" />
           </figure>
 
-          <button className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-6 py-2 rounded-2xl text-slate-50">
+          <button className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-2 md:px-6 py-2 rounded-2xl text-xs md:text-base text-slate-50">
             info lebih lanjut
           </button>
         </div>

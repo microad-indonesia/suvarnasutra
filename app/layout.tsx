@@ -3,11 +3,13 @@
 import React from "react";
 // import Link from "next/link";
 // import { Navigation } from "~/components/navigation";
+import Template from "./template";
 import "./globals.css";
 import { DM_Sans } from "next/font/google";
-import Footer from "~/components/footer";
+// import Footer from "~/components/footer";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Footer from "~/components/footer";
 
 // import Sampling from "~/components/sampling";
 
@@ -23,12 +25,12 @@ const RootLayout = ({ children }: layoutProps) => {
   return (
     <html>
       <head />
-      <body className="flex flex-col items-center mx-auto min-w-7xl min-h-screen bg-slate-50">
+      <body>
         <main className={`${inter.variable} font-sans`}>
           {/* <nav>
             <Navigation />
           </nav> */}
-          {children}
+          <Template>{children}</Template>
           <Footer />
         </main>
       </body>
