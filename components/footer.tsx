@@ -8,7 +8,7 @@ import LogoWhite from "~/public/logo-white.png";
 const Footer: React.FC = () => {
   return (
     <>
-      <section className="bg-sakura-10 w-full px-4 md:px-[100px] py-4 md:py-[80px] mx-auto">
+      <section className="bg-sakura-100 w-full px-4 md:px-[100px] py-4 md:py-[80px] mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-end justify-center gap-4">
           {/* logo */}
           <div className="flex-1">
@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
       </section>
-      <div className="bg-sakura-100 py-4">
+      <div className="bg-sakura-10 py-4">
         <p className="text-center paragraph text-white">
           © 2023 Suvarna Sutera. All rights reserved.
         </p>

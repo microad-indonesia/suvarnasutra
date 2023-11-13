@@ -16,34 +16,34 @@ export function Unit3({
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <g clip-path="url(#clip0_349_160)">
+      <g clipPath="url(#clip0_349_160)">
         <path
           d="M0.591064 0.628586L0.591064 36.3716H12.4488L12.4488 0.628586H0.591064Z"
           stroke="#D1AA67"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M16.551 0.628586L16.551 36.3716H28.4087V0.628586H16.551Z"
           stroke="#D1AA67"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M8.88434 15.939V17.9502"
           stroke="#D1AA67"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
         <path
           d="M20.1157 15.939V17.9502"
           stroke="#D1AA67"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </g>
       <defs>
