@@ -9,9 +9,10 @@ module.exports = {
     extend: {
       colors: {
         "sakura-5": "#FFDFDF",
-        "sakura-10": "#F296AC8A",
-        "sakura-100": "#F031A4",
+        "sakura-10": "#ED859E",
+        "sakura-100": "#F296AC",
         "sakura-brown": "#5B3819",
+        "sakura-blue": "#170F49",
       },
     },
   },

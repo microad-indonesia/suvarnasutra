@@ -25,6 +25,7 @@ import Denah1Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-1.png";
 import Denah2Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-2.png";
 import LogoBurnet from "~/public/assets/Unit-Rumah/The-burnet/Logo.png";
 import { Unit1, Unit2, Unit3, Unit4, Unit5 } from "./icons";
+// import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
 // import { DataProps } from "~/pages";
 
@@ -46,7 +47,29 @@ function SamplePrevArrow(props: any) {
   return (
     <div
       className={className}
-      style={{ ...style, display: "none", background: "green" }}
+      style={{
+        ...style,
+        borderTop: "20px solid transparent",
+        borderBottom: "20px solid transparent",
+        borderLeft: "20px solid #D1AA67",
+        transform: "rotate(180deg)",
+      }}
+      onClick={onClick}
+    />
+  );
+}
+function SampleNextArrow(props: any) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{
+        ...style,
+
+        borderTop: "20px solid transparent",
+        borderBottom: "20px solid transparent",
+        borderLeft: "20px solid #D1AA67",
+      }}
       onClick={onClick}
     />
   );
@@ -57,7 +80,7 @@ export default function SliderComponents() {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -65,7 +88,7 @@ export default function SliderComponents() {
     autoplay: true,
     cssEase: "linear",
     prevArrow: <SamplePrevArrow />,
-    nextArrow: <SamplePrevArrow />,
+    nextArrow: <SampleNextArrow />,
   };
   return (
     <section className="relative">
@@ -131,29 +154,35 @@ export default function SliderComponents() {
                     })}
                     <p>2 MOBIL</p>
                   </div>
-                  <div className="flex items-center gap-x-2">
+                  {/* <div className="flex items-center gap-x-2">
                     {React.createElement(Unit5, {
                       width: "48px",
                       height: "35px",
                     })}
                     <p>1 MOTOR</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              <div className="flex items-center mt-3 md:mt-0">
-                <figure className="flex-1 w-full h-fit">
-                  <Image
-                    src={Denah1Bellflower}
-                    alt="denah-rumah-bellflower-1"
-                  />
-                </figure>
-                <figure className="flex-1 w-full h-fit">
-                  <Image
-                    src={Denah2Bellflower}
-                    alt="denah-rumah-bellflower-2"
-                  />
-                </figure>
+              <div className="flex items-center justify-center mt-3 md:mt-0">
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image
+                      src={Denah1Bellflower}
+                      alt="denah-rumah-bellflower-1"
+                    />
+                  </figure>
+                  <p>Lantai Bawah</p>
+                </div>
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image
+                      src={Denah2Bellflower}
+                      alt="denah-rumah-bellflower-2"
+                    />
+                  </figure>
+                  <p>Lantai Atas</p>
+                </div>
               </div>
             </div>
           </div>
@@ -228,13 +257,19 @@ export default function SliderComponents() {
                 </div>
               </div>
 
-              <div className="flex items-center mt-3 md:mt-0">
-                <figure className="flex-1 w-full h-fit">
-                  <Image src={Denah1} alt="denah-rumah-bloom-1" />
-                </figure>
-                <figure className="flex-1 w-full h-fit">
-                  <Image src={Denah2} alt="denah-rumah-bloom-2" />
-                </figure>
+              <div className="flex items-center justify-center mt-3 md:mt-0">
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image src={Denah1} alt="denah-rumah-bloom-1" />
+                  </figure>
+                  <p>Lantai Bawah</p>
+                </div>
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image src={Denah2} alt="denah-rumah-bloom-2" />
+                  </figure>
+                  <p>Lantai Atas</p>
+                </div>
               </div>
             </div>
           </div>
@@ -299,23 +334,29 @@ export default function SliderComponents() {
                     })}
                     <p>2 MOBIL</p>
                   </div>
-                  <div className="flex items-center gap-x-2">
+                  {/* <div className="flex items-center gap-x-2">
                     {React.createElement(Unit5, {
                       width: "48px",
                       height: "35px",
                     })}
                     <p>1 MOTOR</p>
-                  </div>
+                  </div> */}
                 </div>
               </div>
 
-              <div className="flex items-center mt-3 md:mt-0">
-                <figure className="flex-1 w-full h-fit">
-                  <Image src={Denah1Burnet} alt="denah-rumah-burnet-1" />
-                </figure>
-                <figure className="flex-1 w-full h-fit">
-                  <Image src={Denah2Burnet} alt="denah-rumah-burnet-2" />
-                </figure>
+              <div className="flex items-center justify-center mt-3 md:mt-0">
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image src={Denah1Burnet} alt="denah-rumah-burnet-1" />
+                  </figure>
+                  <p>Lantai Bawah</p>
+                </div>
+                <div className="flex-1 text-center">
+                  <figure className="w-full h-fit">
+                    <Image src={Denah2Burnet} alt="denah-rumah-burnet-2" />
+                  </figure>
+                  <p>Lantai Atas</p>
+                </div>
               </div>
             </div>
           </div>

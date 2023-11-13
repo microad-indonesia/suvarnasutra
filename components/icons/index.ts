@@ -11,3 +11,5 @@ export * from "./unit-2";
 export * from "./unit-3";
 export * from "./unit-4";
 export * from "./unit-5";
+export * from "./ornament";
+export * from "./ornament-1";
