@@ -85,7 +85,7 @@ export default function SliderComponents() {
     slidesToShow: 1,
     slidesToScroll: 1,
     row: 3,
-    autoplay: true,
+    autoplay: false,
     cssEase: "linear",
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
@@ -95,7 +95,7 @@ export default function SliderComponents() {
       <div className="block max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
         <Slider {...settings}>
           {/* Bellflower */}
-          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+          <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
             <div className="flex flex-wrap justify-evenly">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
@@ -188,7 +188,7 @@ export default function SliderComponents() {
           </div>
 
           {/* Bloom done */}
-          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+          <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
             <div className="flex flex-wrap justify-evenly">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
@@ -275,7 +275,7 @@ export default function SliderComponents() {
           </div>
 
           {/* Burnet */}
-          <div className="bg-white shadow-xl rounded-xl p-8 w-[320px] h-fit">
+          <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
             <div className="flex flex-wrap justify-evenly">
               <div className="flex-initial">
                 <figure className="w-full h-fit">

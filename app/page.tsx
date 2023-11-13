@@ -97,9 +97,7 @@ export default function HomePage() {
       const URLEncode: string = new URLSearchParams(mergingResult).toString();
       event.currentTarget.reset();
       const response = await axios.post(`/api/campaign`, URLEncode);
-      const resp = await response.status;
-      console.log("resp", resp);
-
+      await response.status;
       setTimeout(() => {
         setWasSubmitted(false);
         window.location.href = "/thankyou";
@@ -115,7 +113,7 @@ export default function HomePage() {
 
       {/* homebanner  */}
       <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40">
-        <div className="absolute -left-8 md:-left-0 h-fit inset-0 flex justify-between items-center mx-0 md:mx-10 gap-1 md:gap-4">
+        <div className="absolute mt-6 md:mt-10 -left-8 md:-left-0 h-fit inset-0 flex justify-between items-center mx-0 md:mx-10 gap-1 md:gap-4">
           {/* logo */}
           <div className="flex-1">
             <div className="flex items-center">
@@ -367,7 +365,7 @@ export default function HomePage() {
               <div className="flex items-center justify-center mt-6 ">
                 <button
                   type="submit"
-                  className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-6 py-2 rounded-2xl text-slate-50 "
+                  className="bg-gradient-to-b from-sakura-10 to-pink-600 px-6 py-2 rounded-2xl text-slate-50 "
                 >
                   Submit
                 </button>
@@ -387,7 +385,7 @@ export default function HomePage() {
       </section>
 
       {/* unit rumah */}
-      <section className="relative h-fit w-[360px] md:w-full mt-10">
+      <section className="cloud-section relative h-fit w-[360px] md:w-full mt-10">
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-[30px]">
             <div className="flex items-center justify-center">
@@ -515,7 +513,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-10">
             <figure className="w-full h-fit rounded-2xl">
               <Image src={BfDeret} alt="bellflower-deret" />
             </figure>
@@ -588,7 +586,7 @@ export default function HomePage() {
       </section>
 
       {/* end promo */}
-      <section className="relative block bg-sakura-10/30 mt-10 h-auto md:h-fit w-[360px] md:w-full">
+      <section className="relative block bg-sakura-10/30 h-auto md:h-fit w-[360px] md:w-full">
         <figure className="w-full h-fit">
           <Image
             className="mix-blend-overlay object-cover bg-center bg-no-repeat"
