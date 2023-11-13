@@ -70,7 +70,7 @@ export default function BenefitSlider() {
     speed: 1500,
     slidesToShow: 3,
     slidesToScroll: 3,
-    autoplay: true,
+    autoplay: false,
     cssEase: "linear",
     prevArrow: <SamplePrevArrow />,
     nextArrow: <SampleNextArrow />,
