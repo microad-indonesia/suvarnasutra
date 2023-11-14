@@ -1,0 +1,56 @@
+@import url("https://use.typekit.net/tih1jul.css");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-DM_Sans);
+}
+
+p,
+span,
+ul,
+li,
+a {
+  font-family: var(--font-DM_Sans);
+}
+
+.heading {
+  @apply text-[24px] md:text-[34px] leading-7 md:leading-[20px] tracking-normal;
+}
+
+.paragraph {
+  @apply text-[14px] md:text-base leading-5 md:leading-[22px];
+}
+
+h4.card-title {
+  @apply text-base md:text-2xl leading-5 md:leading-7;
+}
+
+p.card-content {
+  @apply text-sm leading-[18px] md:text-base md:leading-5;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+  opacity: 0 !important;
+}
+
+.slick-prev:before {
+  content: "" !important;
+}
+.slick-next:before {
+  content: "" !important;
+}
+
+section.cloud-section {
+  background-image: url("/assets/bg-image-cloud-1.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
