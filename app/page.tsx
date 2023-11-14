@@ -40,6 +40,7 @@ import Feat5 from "~/public/assets/facilities/Group-2.png";
 import Feat6 from "~/public/assets/facilities/Group-5.png";
 import { Ornament, Ornament1 } from "~/components/icons";
 
+// age-range
 const rangeAge = [
   { AgeRange: "--select--" },
   { AgeRange: "18-24" },
