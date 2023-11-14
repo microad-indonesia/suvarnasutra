@@ -11,19 +11,19 @@ import Image from "next/image";
 import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/Denah-Rumah.png";
 import Denah1 from "~/public/assets/Unit-Rumah/The-bloom/Denah-1.png";
 import Denah2 from "~/public/assets/Unit-Rumah/The-bloom/Denah-2.png";
-import LogoBloom from "~/public/assets/Unit-Rumah/The-bloom/Tipe-Bloom-1.png";
+import LogoBloom from "~/public/assets/Unit-Rumah/The-bloom/logo-1.svg";
 
 // unit rumah bellflower
 import HomeImageBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Image-Rumah.png";
 import Denah1Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-1.png";
 import Denah2Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-2.png";
-import LogoBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Logo.png";
+import LogoBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Logo-2.svg";
 
 // unit rumah burnet
 import HomeImageBurnet from "~/public/assets/Unit-Rumah/The-burnet/Image-Rumah.png";
 import Denah1Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-1.png";
 import Denah2Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-2.png";
-import LogoBurnet from "~/public/assets/Unit-Rumah/The-burnet/Logo.png";
+import LogoBurnet from "~/public/assets/Unit-Rumah/The-burnet/Logo-3.svg";
 import { Unit1, Unit2, Unit3, Unit4, Unit5 } from "./icons";
 // import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/solid";
 
