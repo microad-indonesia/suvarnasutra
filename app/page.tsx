@@ -17,7 +17,7 @@ import BasantaHeadBanner from "~/public/assets/perumahan-2.png";
 import BasanthaImage from "~/public/assets/basanta/Logo-Basantha-Color-1.png";
 import LogoColor from "~/public/logo-ss.png";
 import TitleImage from "~/public/assets/title.png";
-import SubtitleImage from "~/public/assets/subtitle.png";
+import SubtitleImage from "~/public/assets/a-new.png";
 import { PhoneIcon } from "@heroicons/react/outline";
 import axios from "axios";
 import BenefitSlider from "~/components/page-component/benefit-slider";
@@ -125,7 +125,7 @@ export default function HomePage() {
 
           {/* title */}
           <div className="flex-1">
-            <div className="flex flex-col items-center justify-center">
+            <div className="flex flex-col items-center justify-center space-y-3">
               <figure className="w-fit h-fit">
                 <Image src={TitleImage} alt="title" />
               </figure>
@@ -138,7 +138,7 @@ export default function HomePage() {
           {/* phone */}
           <div className="flex-1">
             <a className="flex items-end justify-end" href="tel:02131103838">
-              <button className="bg-gradient-to-b from-sakura-10 to-sakura-100 px-2 md:px-6 py-2 rounded-full text-slate-50 inline-flex items-center gap-2 text-[8px] md:text-base">
+              <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-6 py-2 rounded-full text-slate-50 inline-flex items-center gap-2 text-[8px] md:text-base">
                 <figure className="w-[19px] h-[18px]">
                   <PhoneIcon />
                 </figure>
@@ -513,76 +513,70 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="space-y-10">
+          <div className="">
             <figure className="w-full h-fit rounded-2xl">
               <Image src={BfDeret} alt="bellflower-deret" />
             </figure>
 
-            <h1 className="heading font-medium text-sakura-brown text-center">
-              Fasilitas Yang Kamu Dapatkan
-            </h1>
+            <div className="mt-4 md:mt-6">
+              <h1 className="heading font-bold text-sakura-brown text-center">
+                Fasilitas Yang Kamu Dapatkan
+              </h1>
 
-            <div className="grid grid-cols-2 place-items-baseline grid-flow-row gap-4 mx-0 md:mx-40 p-8">
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat1} alt="benefit-1" />
-                </figure>
-                <p className="paragraph text-sakura-brown">
-                  Dekat Dengan Tol Jakarta-Tangerang
-                </p>
-              </div>
+              <div className="grid grid-cols-2 place-items-baseline grid-flow-row gap-4 mx-0 md:mx-40 p-4 md:p-8">
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat1} alt="benefit-1" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    Dekat Dengan Tol Jakarta-Tangerang
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat2} alt="benefit-2" />
-                </figure>
-                <p className="paragraph text-sakura-brown">Ruang Serbaguna</p>
-              </div>
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat2} alt="benefit-2" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">Ruang Serbaguna</p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat3} alt="benefit-3" />
-                </figure>
-                <p className="paragraph text-sakura-brown">
-                  Taman Bermain Anak
-                </p>
-              </div>
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat3} alt="benefit-3" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    Taman Bermain Anak
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat4} alt="benefit-4" />
-                </figure>
-                <p className="paragraph text-sakura-brown">
-                  Kolam Renang Anak & Dewasa
-                </p>
-              </div>
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat4} alt="benefit-4" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    Kolam Renang Anak & Dewasa
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat5} alt="benefit-5" />
-                </figure>
-                <p className="paragraph text-sakura-brown">
-                  Lapangan Basket 3 on 3
-                </p>
-              </div>
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat5} alt="benefit-5" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">
+                    Lapangan Basket 3 on 3
+                  </p>
+                </div>
 
-              <div className="flex items-center gap-4">
-                <figure className="w-fit h-fit">
-                  <Image src={Feat6} alt="benefit-6" />
-                </figure>
-                <p className="paragraph text-sakura-brown">Area Komersil</p>
+                <div className="flex items-center gap-4">
+                  <figure className="w-fit h-fit">
+                    <Image src={Feat6} alt="benefit-6" />
+                  </figure>
+                  <p className="paragraph text-sakura-brown">Area Komersil</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* <figure className="w-full h-full aspect-square md:aspect-video">
-          <Image
-            className="object-cover bg-center bg-repeat-y"
-            src={CloudLong}
-            alt="banner-cloud"
-          />
-        </figure> */}
       </section>
 
       {/* end promo */}
@@ -596,7 +590,7 @@ export default function HomePage() {
             height={341}
           />
         </figure>
-        <div className="absolute bottom-4 translate-x-0 md:translate-x-1/3 flex justify-between items-center gap-x-10">
+        <div className="absolute bottom-4 top-0 translate-x-0 md:translate-x-1/3 flex justify-between items-center gap-x-10">
           <figure className="w-full h-fit">
             <Image src={GiftCard} alt="form-image" />
           </figure>
