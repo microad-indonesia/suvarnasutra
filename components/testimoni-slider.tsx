@@ -96,15 +96,15 @@ export default function SliderComponents() {
       <div className="block max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10">
         <Slider {...settings}>
           {/* Bloom done */}
-          <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
+          <div className="bg-transparant rounded-xl p-8 w-[320px] h-fit">
             <div className="flex flex-wrap justify-evenly">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
                   <Image
                     src={HomeImage}
                     alt="denah-rumah-bloom"
-                    width={457}
-                    height={524}
+                    width={360}
+                    height={360}
                   />
                 </figure>
               </div>
@@ -115,8 +115,8 @@ export default function SliderComponents() {
                     <Image
                       src={LogoBloom}
                       alt="logo-bloom"
-                      width={185}
-                      height={64}
+                      width={130}
+                      height={44}
                     />
                   </figure>
                   <p className="paragraph text-sakura-brown">
@@ -165,7 +165,7 @@ export default function SliderComponents() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center mt-3 md:mt-0">
+              <div className="flex mt-3 md:mt-0">
                 <div className="flex-1 text-center">
                   <figure className="w-full h-fit">
                     <Image src={Denah1} alt="denah-rumah-bloom-1" />
@@ -190,8 +190,8 @@ export default function SliderComponents() {
                   <Image
                     src={HomeImageBurnet}
                     alt="denah-rumah-burnet"
-                    width={457}
-                    height={524}
+                    width={360}
+                    height={360}
                   />
                 </figure>
               </div>
@@ -202,8 +202,8 @@ export default function SliderComponents() {
                     <Image
                       src={LogoBurnet}
                       alt="logo-burnet"
-                      width={185}
-                      height={64}
+                      width={130}
+                      height={44}
                     />
                   </figure>
                   <p className="paragraph text-sakura-brown">
@@ -252,7 +252,7 @@ export default function SliderComponents() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center mt-3 md:mt-0">
+              <div className="flex mt-3 md:mt-0">
                 <div className="flex-1 text-center">
                   <figure className="w-full h-fit">
                     <Image src={Denah1Burnet} alt="denah-rumah-burnet-1" />
@@ -277,8 +277,8 @@ export default function SliderComponents() {
                   <Image
                     src={HomeImageBellflower}
                     alt="denah-rumah-bellflower"
-                    width={457}
-                    height={524}
+                    width={360}
+                    height={360}
                   />
                 </figure>
               </div>
@@ -289,8 +289,8 @@ export default function SliderComponents() {
                     <Image
                       src={LogoBellflower}
                       alt="logo-bellflower"
-                      width={185}
-                      height={64}
+                      width={130}
+                      height={44}
                     />
                   </figure>
                   <p className="paragraph text-sakura-brown">
@@ -339,7 +339,7 @@ export default function SliderComponents() {
                 </div>
               </div>
 
-              <div className="flex items-center justify-center mt-3 md:mt-0">
+              <div className="flex mt-3 md:mt-0">
                 <div className="flex-1 text-center">
                   <figure className="w-full h-fit">
                     <Image

@@ -118,7 +118,7 @@ export default function HomePage() {
           <div className="flex-1">
             <div className="flex items-center">
               <figure className="w-14 h-auto md:w-fit md:h-fit">
-                <Image src={LogoColor} alt="Logo" width={130} height={114} />
+                <Image src={LogoColor} alt="Logo" width={83} height={92} />
               </figure>
             </div>
           </div>
@@ -580,10 +580,10 @@ export default function HomePage() {
       </section>
 
       {/* end promo */}
-      <section className="relative block bg-sakura-10/30 h-auto md:h-fit w-[360px] md:w-full">
+      <section className="relative bg-sakura-100/90 block h-auto md:h-fit w-[360px] md:w-full">
         <figure className="w-full h-fit">
           <Image
-            className="mix-blend-overlay object-cover bg-center bg-no-repeat"
+            className="mix-blend-multiply object-cover bg-center bg-no-repeat"
             src={BasantaClusterPromo}
             alt="promo_image"
             width={1440}
