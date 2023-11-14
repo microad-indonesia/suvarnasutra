@@ -103,8 +103,8 @@ export default function SliderComponents() {
                   <Image
                     src={HomeImage}
                     alt="denah-rumah-bloom"
-                    width={360}
-                    height={360}
+                    width={457}
+                    height={524}
                   />
                 </figure>
               </div>
@@ -190,8 +190,8 @@ export default function SliderComponents() {
                   <Image
                     src={HomeImageBurnet}
                     alt="denah-rumah-burnet"
-                    width={360}
-                    height={360}
+                    width={457}
+                    height={524}
                   />
                 </figure>
               </div>
@@ -277,8 +277,8 @@ export default function SliderComponents() {
                   <Image
                     src={HomeImageBellflower}
                     alt="denah-rumah-bellflower"
-                    width={360}
-                    height={360}
+                    width={457}
+                    height={524}
                   />
                 </figure>
               </div>

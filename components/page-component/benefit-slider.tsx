@@ -137,7 +137,7 @@ export default function BenefitSlider() {
                 Desain Modern Minimalis
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Rumah 2 lantai dengan paras lengkungan bertekstur yang
               dikombinasikan dengan material dinding motif kayu memberikan
               nuansa modern pada fasad rumah cluster Basanta.
@@ -157,7 +157,7 @@ export default function BenefitSlider() {
                 Lokasi Berkembang
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Cluster Basanta Suvarna Sutera berada di dekat area komersial dan
               akses dekat dengan tol Jakarta-Tangerang.
             </p>
@@ -176,7 +176,7 @@ export default function BenefitSlider() {
                 Spesifikasi Terbaik
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Spesifikasi Cluster Basanta dilengkapi dengan smart door lock,
               roof water tank, instalasi water heater, pergola dengan plafon,
               taman kering dan juga sudah termasuk kompor tanam 2 tungku di
@@ -197,7 +197,7 @@ export default function BenefitSlider() {
                 Denah Minimalis
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Cluster Basanta dilengkapi tata ruang ideal 3 hingga 4 kamar
               tidur, walk-in closet di tipe 6 dan 8, area bekerja, serta carport
               di setiap rumahnya.
@@ -217,7 +217,7 @@ export default function BenefitSlider() {
                 Green Development
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Rumah Cluster Basanta Suvarna Sutera dibuat menghadap utara dan
               selatan untuk memaksimalkan cahaya matahari serta dilengkapi
               tanaman hijau di sepanjang jalan utama dan cluster hunian.
@@ -237,7 +237,7 @@ export default function BenefitSlider() {
                 Fasilitas Cluster Lengkap
               </p>
             </div>
-            <p className="paragraph my-[14px]">
+            <p className="paragraph text-center my-[14px]">
               Cluster Basanta dilengkapi akses dekat dengan tol
               Jakarta-Tangerang, taman bermain anak, lapangan basket, kolam
               renang, dan ruang serbaguna.

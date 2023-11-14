@@ -8,14 +8,14 @@ import LogoWhite from "~/public/assets/suvarna-sutera-logo-white.svg";
 const Footer: React.FC = () => {
   return (
     <>
-      <section className="bg-sakura-100 w-full px-4 md:px-[100px] py-4 md:py-[80px] mx-auto">
+      <section className="bg-sakura-100 w-full px-4 md:px-[132px] py-4 md:py-10 mx-auto">
         <div className="flex flex-col md:flex-row items-start md:items-start justify-center gap-4">
           {/* logo */}
           <div className="flex-1">
             <Image src={LogoWhite} width={130} height={114} alt="logo-white" />
           </div>
 
-          <div className="flex-1">
+          <div className="flex-1 space-y-4">
             <p className="paragraph font-medium text-white">
               MARKETING OFFICE SUVARNA SUTERA
             </p>
@@ -23,7 +23,7 @@ const Footer: React.FC = () => {
               Jl. Suvarna Sutera Boulevard No. 10 Pasar Kemis, Tangerang, 15560
             </p>
           </div>
-          <div className="flex-1">
+          <div className="flex-1 space-y-4">
             <p className="paragraph font-medium text-white">
               MARKETING OFFICE SUVARNA RESPATI
             </p>
