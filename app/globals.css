@@ -6,11 +6,8 @@
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-DM_Sans);
+h3 {
+  font-family: var(--font-DM_Serif_Text);
 }
 
 p,

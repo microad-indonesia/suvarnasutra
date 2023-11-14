@@ -39,7 +39,15 @@ import Feat4 from "~/public/assets/facilities/Group-4.png";
 import Feat5 from "~/public/assets/facilities/Group-2.png";
 import Feat6 from "~/public/assets/facilities/Group-5.png";
 import { Ornament, Ornament1 } from "~/components/icons";
+import { DM_Sans } from "next/font/google";
 
+const DMSans = DM_Sans({
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
+
+// age-range
 const rangeAge = [
   { AgeRange: "--select--" },
   { AgeRange: "18-24" },
@@ -169,9 +177,10 @@ export default function HomePage() {
           {/* form */}
           <div className="flex-initial z-10 bg-[#FAF8F8]/60 p-8 md:p-16 rounded-2xl min-w-[360px] shadow-xl">
             <div className="mb-4 w-full text-center">
-              <h5 className="font-bold text-[34px] leading-[46px] text-sakura-blue">
+              <p className=" text-[34px] leading-[34px] font-bold text-sakura-blue">
                 Silahkan Mengisi Form
-              </h5>
+              </p>
+
               <p className="text-lg leading-[30px] text-[#6F6C90] mt-2">
                 Untuk mendapatkan informasi mengenai produk
               </p>
@@ -188,7 +197,7 @@ export default function HomePage() {
                   <div className="space-y-3">
                     <label
                       htmlFor="FirstName"
-                      className="block text-sm font-semibold leading-6 text-sakura-blue"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                     >
                       First name
                     </label>
@@ -210,7 +219,7 @@ export default function HomePage() {
                   <div className="space-y-3">
                     <label
                       htmlFor="FirstName"
-                      className="block text-sm font-semibold leading-6 text-sakura-blue"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                     >
                       Last name
                     </label>
@@ -234,7 +243,7 @@ export default function HomePage() {
                 <div className="space-y-3">
                   <label
                     htmlFor="Email"
-                    className="block text-sm font-semibold leading-6 text-sakura-blue"
+                    className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                   >
                     Email
                   </label>
@@ -255,7 +264,7 @@ export default function HomePage() {
                   <div className="space-y-3">
                     <label
                       htmlFor="PhoneNumber"
-                      className="block text-sm font-semibold leading-6 textsakura-blue"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                     >
                       Phone Number
                     </label>
@@ -279,7 +288,7 @@ export default function HomePage() {
                   <div className="relative">
                     <label
                       htmlFor="AgeRange"
-                      className="block text-sm font-semibold leading-6 text-sakura-blue"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                     >
                       Age Range
                     </label>
@@ -346,7 +355,7 @@ export default function HomePage() {
                 <div className="space-y-3">
                   <label
                     htmlFor="Message"
-                    className="block text-sm font-semibold leading-6 text-sakura-blue"
+                    className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                   >
                     Message
                   </label>
@@ -395,9 +404,9 @@ export default function HomePage() {
                   height: "42px",
                 })}
               </figure> */}
-              <h1 className="heading font-bold text-sakura-brown text-center">
+              <p className=" text-[34px] leading-5 font-bold text-sakura-brown text-center">
                 Yang kamu Dapatkan dari
-              </h1>
+              </p>
               {/* <figure className="scale-80">
                 {React.createElement(Ornament1, {
                   width: "88px",
@@ -519,9 +528,9 @@ export default function HomePage() {
             </figure>
 
             <div className="my-4 md:my-[51px]">
-              <h1 className="heading font-bold text-sakura-brown text-center">
+              <p className=" text-[34px] leading-5 font-bold text-sakura-brown text-center">
                 Fasilitas Yang Kamu Dapatkan
-              </h1>
+              </p>
 
               <div className="grid grid-cols-2 place-items-baseline grid-flow-row gap-4 mx-0 md:mx-40 p-4 md:p-8">
                 <div className="flex items-center gap-4">
