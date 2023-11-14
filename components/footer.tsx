@@ -3,16 +3,16 @@
 import Image from "next/image";
 // import Image from "next/image";
 import React from "react";
-import LogoWhite from "~/public/logo-white.png";
+import LogoWhite from "~/public/assets/suvarna-sutera-logo-white.svg";
 
 const Footer: React.FC = () => {
   return (
     <>
       <section className="bg-sakura-100 w-full px-4 md:px-[100px] py-4 md:py-[80px] mx-auto">
-        <div className="flex flex-col md:flex-row items-start md:items-end justify-center gap-4">
+        <div className="flex flex-col md:flex-row items-start md:items-start justify-center gap-4">
           {/* logo */}
           <div className="flex-1">
-            <Image src={LogoWhite} width={103} height={114} alt="logo-white" />
+            <Image src={LogoWhite} width={130} height={114} alt="logo-white" />
           </div>
 
           <div className="flex-1">

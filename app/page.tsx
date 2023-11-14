@@ -15,7 +15,7 @@ import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
 import BasantaHeadBanner from "~/public/assets/perumahan-2.png";
 // import CloudLong from "~/public/assets/cloud-long.png";
 import BasanthaImage from "~/public/assets/basanta/Logo-Basantha-Color-1.png";
-import LogoColor from "~/public/logo-ss.png";
+import LogoColor from "~/public/assets/suvarna-sutera-logo-color.svg";
 import TitleImage from "~/public/assets/title.png";
 import SubtitleImage from "~/public/assets/a-new.png";
 import { PhoneIcon } from "@heroicons/react/outline";
@@ -112,13 +112,13 @@ export default function HomePage() {
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
 
       {/* homebanner  */}
-      <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40">
-        <div className="absolute mt-6 md:mt-10 -left-8 md:-left-0 h-fit inset-0 flex justify-between items-center mx-0 md:mx-10 gap-1 md:gap-4">
+      <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40 mt-4 md:mt-0">
+        <div className="absolute mt-0 md:mt-10 -left-0 md:-left-0 h-fit inset-0 flex justify-between items-center mx-4 md:mx-10 gap-1 md:gap-4">
           {/* logo */}
           <div className="flex-1">
             <div className="flex items-center">
-              <figure className="w-fit h-fit">
-                <Image src={LogoColor} alt="Logo" />
+              <figure className="w-14 h-auto md:w-fit md:h-fit">
+                <Image src={LogoColor} alt="Logo" width={130} height={114} />
               </figure>
             </div>
           </div>
@@ -518,7 +518,7 @@ export default function HomePage() {
               <Image src={BfDeret} alt="bellflower-deret" />
             </figure>
 
-            <div className="mt-4 md:mt-6">
+            <div className="my-4 md:my-[51px]">
               <h1 className="heading font-bold text-sakura-brown text-center">
                 Fasilitas Yang Kamu Dapatkan
               </h1>
@@ -594,10 +594,11 @@ export default function HomePage() {
           <figure className="w-full h-fit">
             <Image src={GiftCard} alt="form-image" />
           </figure>
-
-          <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-4 py-2 rounded-full text-[10px] md:text-base text-slate-50 w-[200px]">
-            info lebih lanjut
-          </button>
+          <a href="tel:02131103838">
+            <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-4 py-2 rounded-full text-[10px] md:text-base text-slate-50 w-24 md:w-[200px] capitalize">
+              info lebih lanjut
+            </button>
+          </a>
         </div>
       </section>
     </>
