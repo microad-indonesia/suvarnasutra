@@ -17,8 +17,6 @@
     "@headlessui/react": "^1.7.17",
     "@heroicons/react": "^1.0.6",
     "@types/node": "18.11.18",
-    "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.10",
     "axios": "^1.2.2",
     "classnames": "^2.3.2",
     "next": "^13.5.5",
@@ -31,6 +29,8 @@
   },
   "devDependencies": {
     "@next/eslint-plugin-next": "^12.2.5",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
     "@typescript-eslint/eslint-plugin": "^5.48.2",
     "@typescript-eslint/parser": "^5.48.2",
     "autoprefixer": "^10.4.16",

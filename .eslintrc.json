@@ -15,7 +15,9 @@
     "react/display-name": "off",
     "no-var": 2,
     "no-undef": 2,
-    "no-param-reassign": 2
+    "no-param-reassign": 2,
+    "eqeqeq": "off",
+    "no-console": "off"
   },
   "settings": {
     "import/resolver": {
