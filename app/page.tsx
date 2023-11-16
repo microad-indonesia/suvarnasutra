@@ -180,7 +180,7 @@ export default function Revamp() {
           <div className="relative flex flex-wrap items-center px-10 md:px-20">
             <div className="w-7/12 relative z-20">
               {/* form */}
-              <div className="box-form flex flex-col justify-center py-10 md:py-16 px-20 md:px-16 x3l:px-32 h-auto md:h-[80vh] x3l:h-[99vh]">
+              <div className="box-form flex flex-col justify-center py-10 md:py-16 px-20 md:px-16 x3l:px-32 h-auto md:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
                 <div className="mb-5 md:mb-8 w-full text-center">
                   <p className="dm-sans font-bold text-[2rem] leading-[2.25rem] text-sakura-blue">
                     Silahkan Mengisi Form
@@ -534,60 +534,64 @@ export default function Revamp() {
               <Image src={BfDeret} alt="bellflower-deret" />
             </figure>
 
-            <div className="my-4 md:my-[51px]">
-              <p className=" text-[34px] leading-5 font-bold text-sakura-brown text-center">
+            <div className="bg-[#FAF8F8]/50 w-11/12 py-10 md:py-10 mx-auto mb-8 md:mb-20 shadow-lg rounded-b-3xl">
+              <p className="dm-sans text-[34px] leading-5 font-bold text-sakura-brown text-center mb-6">
                 Fasilitas Yang Kamu Dapatkan
               </p>
 
-              <div className="grid grid-cols-2 place-items-baseline grid-flow-row gap-4 mx-0 md:mx-40 p-4 md:p-8">
-                <div className="flex items-center gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 place-items-baseline grid-flow-row gap-6 mx-0 md:mx-20 p-2 md:p-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans text-[14px] md:text-base text-black">
                     Dekat Dengan Tol Jakarta-Tangerang
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat2} alt="benefit-2" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">Ruang Serbaguna</p>
+                  <p className="dm-sans text-[14px] md:text-base text-black">
+                    Ruang Serbaguna
+                  </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat3} alt="benefit-3" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans text-[14px] md:text-base text-black">
                     Taman Bermain Anak
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat4} alt="benefit-4" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans text-[14px] md:text-base text-black">
                     Kolam Renang Anak & Dewasa
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat5} alt="benefit-5" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans text-[14px] md:text-base text-black">
                     Lapangan Basket 3 on 3
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4">
+                <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat6} alt="benefit-6" />
                   </figure>
-                  <p className="paragraph text-sakura-brown">Area Komersil</p>
+                  <p className="dm-sans text-[14px] md:text-base text-black">
+                    Area Komersil
+                  </p>
                 </div>
               </div>
             </div>
@@ -596,7 +600,7 @@ export default function Revamp() {
       </section>
 
       {/* end promo */}
-      <section className="relative bg-sakura-100/90 block h-auto md:h-fit w-[360px] md:w-full">
+      <section className="relative bg-[#F296AC]/60 block h-auto md:h-fit w-[360px] md:w-full">
         <figure className="w-full h-fit">
           <Image
             className="w-full mix-blend-multiply object-cover bg-center bg-no-repeat"
@@ -606,15 +610,19 @@ export default function Revamp() {
             height={341}
           />
         </figure>
-        <div className="absolute bottom-4 top-0 translate-x-0 md:translate-x-1/3 flex justify-between items-center gap-x-10">
-          <figure className="w-full h-fit">
-            <Image src={GiftCard} alt="form-image" />
-          </figure>
-          <a href="tel:02131103838">
-            <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-4 py-2 rounded-full text-[10px] md:text-base text-slate-50 w-24 md:w-[200px] capitalize">
-              info lebih lanjut
-            </button>
-          </a>
+        <div className="w-full absolute bottom-0 top-0 flex flex-col md:flex-row flex-wrap justify-center items-center px-8 md:px-14 x3l:px-24">
+          <div className="w-9/12">
+            <figure className="w-full h-fit">
+              <Image src={GiftCard} alt="form-image" className="md:w-[840px] x3l:w-[920px]" />
+            </figure>
+          </div>
+          <div className="w-full md:w-3/12 x3l:w-2/12 mt-4 md:mt-8">
+            <a href="tel:02131103838">
+              <button className="dm-sans font-bold bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-5 py-4 rounded-full text-[12px] md:text-base xl:text-xl text-slate-50 w-full capitalize">
+                info lebih lanjut
+              </button>
+            </a>
+          </div>
         </div>
       </section>
     </>
