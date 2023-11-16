@@ -1,4 +1,6 @@
 @import url("https://use.typekit.net/tih1jul.css");
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -18,6 +20,14 @@ a {
   font-family: var(--font-DM_Sans);
 }
 
+.dm-sans {
+  font-family: 'DM Sans', sans-serif !important;
+}
+
+.dm-serif {
+  font-family: 'DM Serif Text', serif I !important;
+}
+
 .heading {
   @apply text-[24px] md:text-[34px] leading-7 md:leading-[20px] tracking-normal;
 }
@@ -34,6 +44,16 @@ p.card-content {
   @apply text-sm leading-[18px] md:text-base md:leading-5;
 }
 
+.slick-slider .slick-next {
+  top: 47.5%;
+  right: -30px;
+}
+
+.slick-slider .slick-prev {
+  top: 40%;
+  left: -30px;
+}
+
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before {
   opacity: 0 !important;
@@ -42,6 +62,7 @@ p.card-content {
 .slick-prev:before {
   content: "" !important;
 }
+
 .slick-next:before {
   content: "" !important;
 }
@@ -50,4 +71,10 @@ section.cloud-section {
   background-image: url("/assets/bg-image-cloud-1.webp");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.box-form {
+  background-image: url("/assets/bg-form.png");
+  background-size: cover;
+  background-repeat: repeat;
 }
