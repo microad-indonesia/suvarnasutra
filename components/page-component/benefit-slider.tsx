@@ -107,7 +107,7 @@ export default function BenefitSlider() {
   };
   return (
     <section className="relative">
-      <div className="block max-w-sm md:max-w-3xl lg:max-w-5xl xl:max-w-7xl my-8 md:my-10 x3l:my-14">
+      <div className="block max-w-sm md:max-w-3xl xl:max-w-5xl x3l:max-w-7xl my-8 md:my-10 x3l:my-14">
         <Slider {...settings}>
           <div className="p-4">
             <div className="flex flex-wrap items-center md:items-end gap-x-4 min-h-[90px]">
