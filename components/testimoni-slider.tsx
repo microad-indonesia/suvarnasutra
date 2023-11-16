@@ -81,7 +81,7 @@ export default function SliderComponents() {
   const settings = {
     dots: true,
     infinite: false,
-    speed: 1500,
+    speed: 700,
     slidesToShow: 1,
     slidesToScroll: 1,
     row: 3,
@@ -96,7 +96,7 @@ export default function SliderComponents() {
         <Slider {...settings}>
           {/* Bloom done */}
           <div className="bg-transparant rounded-xl p-8 w-[320px] h-fit">
-            <div className="flex flex-wrap justify-evenly">
+            <div className="flex flex-wrap justify-evenly items-center">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
                   <Image
@@ -108,9 +108,9 @@ export default function SliderComponents() {
                 </figure>
               </div>
 
-              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
-                <div className="space-y-4">
-                  <figure className="w-fit h-fit">
+              <div className="flex-initial space-y-6 max-w-[170px] mt-3 md:mt-0 pl-5">
+                <div className="space-y-2">
+                  <figure className="w-fit h-fit -ml-4 mb-4">
                     <Image
                       src={LogoBloom}
                       alt="logo-bloom"
@@ -118,48 +118,80 @@ export default function SliderComponents() {
                       height={44}
                     />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
                     LT : 72 m² (6x12)
                   </p>
-                  <p className="paragraph text-sakura-brown">LB : 87 m²</p>
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                    LB : 87 m²
+                  </p>
                 </div>
 
                 {/* list facilities */}
                 <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit1, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>3 KT</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit1, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        3 KT
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit2, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>3 KM</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit2, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        3 KM
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit3, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>1 WALK IN CLOSET</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit3, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 WALK IN CLOSET
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit4, {
-                      width: "50px",
-                      height: "20px",
-                    })}
-                    <p>1 MOBIL</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit4, {
+                        width: "50px",
+                        height: "20px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 MOBIL
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit5, {
-                      width: "48px",
-                      height: "35px",
-                    })}
-                    <p>1 MOTOR</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit5, {
+                        width: "48px",
+                        height: "35px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 MOTOR
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -183,7 +215,7 @@ export default function SliderComponents() {
 
           {/* Burnet */}
           <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
-            <div className="flex flex-wrap justify-evenly">
+            <div className="flex flex-wrap justify-evenly items-center">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
                   <Image
@@ -195,9 +227,9 @@ export default function SliderComponents() {
                 </figure>
               </div>
 
-              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
-                <div className="space-y-4">
-                  <figure className="w-fit h-fit">
+              <div className="flex-initial space-y-6 max-w-[170px] mt-3 md:mt-0 pl-5">
+                <div className="space-y-2">
+                  <figure className="w-fit h-fit -ml-4 mb-4">
                     <Image
                       src={LogoBurnet}
                       alt="logo-burnet"
@@ -205,49 +237,81 @@ export default function SliderComponents() {
                       height={44}
                     />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
                     LT : 84 m² (7x12)
                   </p>
-                  <p className="paragraph text-sakura-brown">LB : 101 m²</p>
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                    LB : 101 m²
+                  </p>
                 </div>
 
                 {/* list facilities */}
                 <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit1, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>3 KT</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit1, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        3 KT
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit2, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>3 KM</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit2, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        3 KM
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit3, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>1 WALK IN CLOSET</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit3, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 WALK IN CLOSET
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit4, {
-                      width: "50px",
-                      height: "20px",
-                    })}
-                    <p>2 MOBIL</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit4, {
+                        width: "50px",
+                        height: "20px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 MOBIL
+                      </p>
+                    </div>
                   </div>
-                  {/* <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit5, {
-                      width: "48px",
-                      height: "35px",
-                    })}
-                    <p>1 MOTOR</p>
-                  </div> */}
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit4, {
+                        width: "50px",
+                        height: "20px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        2 MOBIL
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -270,7 +334,7 @@ export default function SliderComponents() {
 
           {/* Bellflower */}
           <div className="bg-transparant  rounded-xl p-8 w-[320px] h-fit">
-            <div className="flex flex-wrap justify-evenly">
+            <div className="flex flex-wrap justify-evenly items-center">
               <div className="flex-initial">
                 <figure className="w-full h-fit">
                   <Image
@@ -282,9 +346,9 @@ export default function SliderComponents() {
                 </figure>
               </div>
 
-              <div className="flex-initial space-y-6 max-w-[186px] mt-3 md:mt-0">
-                <div className="space-y-4">
-                  <figure className="w-fit h-fit">
+              <div className="flex-initial space-y-6 max-w-[170px] mt-3 md:mt-0 pl-5">
+                <div className="space-y-2">
+                  <figure className="w-fit h-fit -ml-4 mb-4">
                     <Image
                       src={LogoBellflower}
                       alt="logo-bellflower"
@@ -292,52 +356,71 @@ export default function SliderComponents() {
                       height={44}
                     />
                   </figure>
-                  <p className="paragraph text-sakura-brown">
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
                     LT : 96 m² (8x12)
                   </p>
-                  <p className="paragraph text-sakura-brown">LB : 122 m²</p>
+                  <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                    LB : 122 m²
+                  </p>
                 </div>
 
                 {/* list facilities */}
                 <div className="flex-1 space-y-4">
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit1, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>4+1 KT</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit1, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        4+1 KT
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit2, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>3+1 KM</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit2, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        3+1 KM
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit3, {
-                      width: "46px",
-                      height: "37px",
-                    })}
-                    <p>1 WALK IN CLOSET</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit3, {
+                        width: "46px",
+                        height: "37px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        1 WALK IN CLOSET
+                      </p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit4, {
-                      width: "50px",
-                      height: "20px",
-                    })}
-                    <p>2 MOBIL</p>
+                  <div className="flex flex-wrap flex-row items-center">
+                    <div className="w-5/12">
+                      {React.createElement(Unit4, {
+                        width: "50px",
+                        height: "20px",
+                      })}
+                    </div>
+                    <div className="w-7/12">
+                      <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                        2 MOBIL
+                      </p>
+                    </div>
                   </div>
-                  {/* <div className="flex items-center gap-x-2">
-                    {React.createElement(Unit5, {
-                      width: "48px",
-                      height: "35px",
-                    })}
-                    <p>1 MOTOR</p>
-                  </div> */}
                 </div>
               </div>
-
+              
               <div className="flex mt-3 md:mt-0">
                 <div className="flex-1 text-center">
                   <figure className="w-full h-fit">

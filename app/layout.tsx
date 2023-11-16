@@ -38,9 +38,6 @@ const RootLayout = ({ children }: layoutProps) => {
         <main
           className={`${DMSerifText.variable} font-sans, ${DMSans.variable} font-serif`}
         >
-          {/* <nav>
-            <Navigation />
-          </nav> */}
           <Template>{children}</Template>
           <Footer />
         </main>
