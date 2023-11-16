@@ -12,7 +12,6 @@ import { useSearchParams } from "next/navigation";
 import SliderComponents from "~/components/testimoni-slider";
 import HomeBanner from "~/public/assets/page-banner.png";
 import GiftCard from "~/public/assets/special-gift.png";
-import FormImage from "~/public/assets/BellflowerDeret_1.png";
 import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
 import BasantaHeadBanner from "~/public/assets/perumahan-2.png";
 // import CloudLong from "~/public/assets/cloud-long.png";
@@ -41,13 +40,13 @@ import Feat4 from "~/public/assets/facilities/Group-4.png";
 import Feat5 from "~/public/assets/facilities/Group-2.png";
 import Feat6 from "~/public/assets/facilities/Group-5.png";
 import { Ornament, Ornament1 } from "~/components/icons";
-// import { DM_Sans } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
-// const DMSans = DM_Sans({
-//   style: ["normal"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
+const DMSans = DM_Sans({
+  style: ["normal"],
+  subsets: ["latin"],
+  display: "swap",
+});
 
 // age-range
 const rangeAge = [
@@ -67,7 +66,7 @@ UTMContent : basanta
 
 */
 
-export default function Revamp() {
+export default function HomePage() {
   const searchParams = useSearchParams();
   const [, setValues] = React.useState<string>("");
   const [, setWasSubmitted] = React.useState<boolean>(false);
@@ -121,7 +120,7 @@ export default function Revamp() {
     <>
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
 
-      {/* Section Banner  */}
+      {/* homebanner  */}
       <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40 mt-4 md:mt-0">
         <div className="absolute mt-0 md:mt-10 -left-0 md:-left-0 h-fit inset-0 flex justify-between items-center mx-4 md:mx-10 gap-1 md:gap-4">
           {/* logo */}
@@ -129,6 +128,18 @@ export default function Revamp() {
             <div className="flex items-center">
               <figure className="w-14 h-auto md:w-fit md:h-fit">
                 <Image src={LogoColor} alt="Logo" width={83} height={92} />
+              </figure>
+            </div>
+          </div>
+
+          {/* title */}
+          <div className="flex-1">
+            <div className="flex flex-col items-center justify-center space-y-3">
+              <figure className="w-fit h-fit">
+                <Image src={TitleImage} alt="title" />
+              </figure>
+              <figure className="w-fit h-fit">
+                <Image src={SubtitleImage} alt="subtitle" />
               </figure>
             </div>
           </div>
@@ -146,272 +157,240 @@ export default function Revamp() {
           </div>
         </div>
 
-        {/* title */}
-        <div className="absolute top-20 inset-x-0 flex justify-center z-20">
-          <div className="flex-1">
-            <div className="flex flex-col items-center justify-center space-y-3">
-              <figure className="w-fit h-fit">
-                <Image src={TitleImage} alt="title" />
-              </figure>
-              <figure className="w-fit h-fit">
-                <Image src={SubtitleImage} alt="subtitle" />
-              </figure>
-            </div>
-          </div>
-        </div>
-
-        <figure className="absolute bottom-10 inset-x-0 flex justify-center z-20">
+        <figure className="absolute bottom-0 inset-x-0 flex justify-center z-20">
           <Image src={GiftCard} alt="promo" />
         </figure>
 
         <figure className="w-full h-full">
           <Image
-            className="w-full object-cover bg-center bg-no-repeat"
+            className="object-cover bg-center bg-no-repeat"
             src={HomeBanner}
             alt="banner"
           />
         </figure>
       </section>
 
-      {/* Section Form */}
-      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-[320px] md:w-full my-6 md:my-0">
+      {/* form */}
+      <section className="relative h-auto md:h-[760px] w-[320px] md:w-full my-6 md:my-0">
         <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
-        <div className="container-sm">
-          <div className="relative flex flex-wrap items-center px-10 md:px-20">
-            <div className="w-7/12 relative z-20">
-              {/* form */}
-              <div className="box-form flex flex-col justify-center py-10 md:py-16 px-20 md:px-16 x3l:px-32 h-auto md:h-[80vh] x3l:h-[99vh]">
-                <div className="mb-5 md:mb-8 w-full text-center">
-                  <p className="dm-sans font-bold text-[2rem] leading-[2.25rem] text-sakura-blue">
-                    Silahkan Mengisi Form
-                  </p>
 
-                  <p className="dm-sans font-medium text-lg text-[#6F6C90] mt-1">
-                    Untuk mendapatkan informasi mengenai produk
-                  </p>
-                </div>
+        <div className="relative mx-8 md:mx-0 flex justify-center items-center mt-0 md:mt-10">
+          {/* form */}
+          <div className="flex-initial z-10 bg-[#FAF8F8]/60 p-8 md:p-16 rounded-2xl min-w-[360px] shadow-xl">
+            <div className="mb-4 w-full text-center">
+              <p className=" text-[34px] leading-[34px] font-bold text-sakura-blue">
+                Silahkan Mengisi Form
+              </p>
 
-                <form
-                  onSubmit={handleForm}
-                  encType={"application/x-www-form-urlencoded"}
-                  method="post"
-                >
-                  <div className="flex flex-wrap flex-col space-y-1 md:space-y-5">
-                    {/* name and lastname */}
-                    <div className="flex flex-row flex-wrap">
-                      <div className="w-full md:w-6/12 pr-0 md:pr-4">
-                        <div className="w-full space-y-1">
-                          <label
-                            htmlFor="FirstName"
-                            className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                          >
-                            First name
-                          </label>
-                          <div className="flex rounded-3xl shadow-md ring-0 ring-inset ring-white bg-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white sm:max-w-2xl">
-                            <input
-                              className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                              type="text"
-                              name="FirstName"
-                              placeholder="Your First Name"
-                              onChange={(event) =>
-                                setValues(event.currentTarget.value)
-                              }
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="w-full md:w-6/12 pl-0 md:pl-4">
-                        <div className="w-full space-y-1">
-                          <label
-                            htmlFor="LastName"
-                            className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                          >
-                            Last name
-                          </label>
-                          <div className="flex rounded-3xl shadow-md ring-1 ring-inset ring-white bg-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white sm:max-w-2xl">
-                            <input
-                              className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                              type="text"
-                              name="LastName"
-                              placeholder="Your Last Name"
-                              onChange={(event) =>
-                                setValues(event.currentTarget.value)
-                              }
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+              <p className="text-lg leading-[30px] text-[#6F6C90] mt-2">
+                Untuk mendapatkan informasi mengenai produk
+              </p>
+            </div>
 
-                    {/* email */}
-                    <div className="space-y-1">
-                      <label
-                        htmlFor="Email"
-                        className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                      >
-                        Email
-                      </label>
-                      <div className="flex rounded-3xl shadow-md ring-0 ring-inset ring-white bg-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white sm:max-w-2xl">
-                        <input
-                          className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                          type="email"
-                          name="Email"
-                          placeholder="Your Email"
-                          onChange={(event) =>
-                            setValues(event.currentTarget.value)
-                          }
-                        />
-                      </div>
-                    </div>
+            <form
+              onSubmit={handleForm}
+              encType={"application/x-www-form-urlencoded"}
+              method="post"
+            >
+              <div className="space-y-1 md:space-y-5">
+                {/* name and lastname */}
+                <div className="flex flex-wrap justify-between items-center">
+                  <div className="space-y-3">
+                    <label
+                      htmlFor="FirstName"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
+                    >
+                      First name
+                    </label>
 
-                    {/* phone & age-range */}
-                    <div className="flex flex-wrap flex-row">
-                      <div className="w-full md:w-6/12 pr-0 md:pr-4">
-                        <div className="w-full space-y-1">
-                          <label
-                            htmlFor="PhoneNumber"
-                            className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                          >
-                            Phone Number
-                          </label>
-                          <div className="flex items-center bg-white rounded-3xl shadow-md ring-0 ring-inset ring-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white text-sm md:text-basse focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white">
-                            <span className="dm-sans ml-2 text-grey-400 text-sm md:text-base text-[#6F6C90]">
-                              +62
-                            </span>
-                            <input
-                              className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                              type="tel"
-                              name="PhoneNumber"
-                              placeholder="your phone number"
-                              onChange={(event) =>
-                                setValues(`+62${event.currentTarget.value}`)
-                              }
-                              required
-                            />
-                          </div>
-                        </div>
-                      </div>
-                      <div className="w-full md:w-6/12 pl-0 md:pl-4">
-                        <div className="relative w-full space-y-1">
-                          <label
-                            htmlFor="AgeRange"
-                            className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                          >
-                            Age Range
-                          </label>
-                          <Listbox value={selected} onChange={setSelected}>
-                            <div className="relative mt-1 w-full">
-                              <Listbox.Button className="relative w-full cursor-default rounded-3xl bg-white py-3 pl-2 pr-10 text-left shadow-md focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white sm:text-sm">
-                                <span className="dm-sans block truncate text-[#6F6C90]">
-                                  {selected.AgeRange}
-                                </span>
-                                <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-                                  <ChevronDownIcon
-                                    className="h-5 w-5 text-[#6F6C90] "
-                                    aria-hidden="true"
-                                  />
-                                </span>
-                              </Listbox.Button>
-                              <Transition
-                                as={Fragment}
-                                leave="transition ease-in duration-100"
-                                leaveFrom="opacity-100"
-                                leaveTo="opacity-0"
-                              >
-                                <Listbox.Options className="dm-sans absolute mt-1 max-h-60 w-full overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-0 ring-black/5 focus:outline-none text-s md:text-base text-[#6F6C90]">
-                                  {rangeAge.map((value, index) => (
-                                    <Listbox.Option
-                                      key={index}
-                                      className={({ active }) =>
-                                        `relative cursor-default select-none py-2 pl-10 pr-4 ${
-                                          active
-                                            ? "bg-sakura-5 text-amber-900"
-                                            : "text-[#6F6C90]"
-                                        }`
-                                      }
-                                      value={value}
-                                    >
-                                      {({ selected }) => (
-                                        <>
-                                          <span
-                                            className={`block truncate ${
-                                              selected
-                                                ? "font-medium"
-                                                : "font-normal"
-                                            }`}
-                                          >
-                                            {value.AgeRange}
-                                          </span>
-                                          {selected ? (
-                                            <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
-                                              <CheckIcon
-                                                className="h-5 w-5"
-                                                aria-hidden="true"
-                                              />
-                                            </span>
-                                          ) : null}
-                                        </>
-                                      )}
-                                    </Listbox.Option>
-                                  ))}
-                                </Listbox.Options>
-                              </Transition>
-                            </div>
-                          </Listbox>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Message */}
-                    <div className="space-y-1">
-                      <label
-                        htmlFor="Message"
-                        className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                      >
-                        Message
-                      </label>
-
-                      <textarea
-                        className="block w-full border-0 py-4 pl-4 text-[#6F6C90] shadow-md ring-0 ring-inset ring-white placeholder:text-[#6F6C90] focus:ring-0 focus:ring-inset focus:ring-white text-sm md:text-base rounded-3xl focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                        name="Message"
-                        placeholder="Your Message"
-                        cols={3}
+                    <div className="flex rounded-2xl shadow-sm ring-1 ring-inset ring-slate-50 bg-slate-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-slate-50 sm:max-w-2xl">
+                      <input
+                        className="block rounded-2xl flex-1 border-0 bg-transparent py-1.5 pl-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+                        type="text"
+                        name="FirstName"
+                        placeholder="your firstname"
                         onChange={(event) =>
                           setValues(event.currentTarget.value)
                         }
                         required
-                      ></textarea>
+                      />
                     </div>
                   </div>
 
-                  <div className="flex items-center justify-center mt-6 md:mt-8 x3l:mt-10">
-                    <button
-                      type="submit"
-                      className="dm-sans font-bold bg-gradient-to-b from-sakura-10 to-pink-600 px-9 py-3 rounded-3xl text-slate-50 text-xl md:text-2xl"
+                  <div className="space-y-3">
+                    <label
+                      htmlFor="FirstName"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
                     >
-                      Submit
-                    </button>
+                      Last name
+                    </label>
+
+                    <div className="flex rounded-2xl shadow-sm ring-1 ring-inset ring-slate-50 bg-slate-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-slate-50 sm:max-w-2xl">
+                      <input
+                        className="block rounded-2xl flex-1 border-0 bg-transparent py-1.5 pl-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+                        type="text"
+                        name="LastName"
+                        placeholder="your lastname"
+                        onChange={(event) =>
+                          setValues(event.currentTarget.value)
+                        }
+                        required
+                      />
+                    </div>
                   </div>
-                </form>
+                </div>
+
+                {/* email */}
+                <div className="space-y-3">
+                  <label
+                    htmlFor="Email"
+                    className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
+                  >
+                    Email
+                  </label>
+
+                  <div className="flex rounded-2xl shadow-sm ring-1 ring-inset ring-slate-50 bg-slate-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-slate-50 sm:max-w-2xl ">
+                    <input
+                      className="block rounded-2xl flex-1 border-0 bg-transparent py-1.5 pl-4 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6 focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+                      type="email"
+                      name="Email"
+                      placeholder="your email"
+                      onChange={(event) => setValues(event.currentTarget.value)}
+                    />
+                  </div>
+                </div>
+
+                {/* phone & age-range */}
+                <div className="flex flex-wrap justify-between items-center">
+                  <div className="space-y-3">
+                    <label
+                      htmlFor="PhoneNumber"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
+                    >
+                      Phone Number
+                    </label>
+                    <div className="flex items-center rounded-2xl shadow-sm ring-1 ring-inset ring-sakura-5 bg-slate-50 focus-within:ring-2 focus-within:ring-inset focus-within:ring-sakura-5 sm:max-w-2xl focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50">
+                      <span className="ml-2 text-grey-400 sm:text-sm sm:leading-6">
+                        +62
+                      </span>
+                      <input
+                        className="block rounded-2xl flex-1 border-0 bg-transparent py-1.5 pl-4 text-gray-900 placeholder:text-gray-400 focus:ring-transparent sm:text-sm sm:leading-6 focus:outline-none focus-visible:border-slate-50 focus-visible:none focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+                        type="tel"
+                        name="PhoneNumber"
+                        placeholder="your phone number"
+                        onChange={(event) =>
+                          setValues(`+62${event.currentTarget.value}`)
+                        }
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div className="relative">
+                    <label
+                      htmlFor="AgeRange"
+                      className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
+                    >
+                      Age Range
+                    </label>
+                    <Listbox value={selected} onChange={setSelected}>
+                      <div className="relative mt-1 w-fit">
+                        <Listbox.Button className="relative w-full cursor-default rounded-2xl bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50 sm:text-sm">
+                          <span className="block truncate">
+                            {selected.AgeRange}
+                          </span>
+                          <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                            <ChevronDownIcon
+                              className="h-5 w-5 text-gray-400"
+                              aria-hidden="true"
+                            />
+                          </span>
+                        </Listbox.Button>
+                        <Transition
+                          as={Fragment}
+                          leave="transition ease-in duration-100"
+                          leaveFrom="opacity-100"
+                          leaveTo="opacity-0"
+                        >
+                          <Listbox.Options className="absolute mt-1 max-h-60 w-sm overflow-auto rounded-md bg-white py-1 text-base shadow-lg ring-1 ring-black/5 focus:outline-none sm:text-sm">
+                            {rangeAge.map((value, index) => (
+                              <Listbox.Option
+                                key={index}
+                                className={({ active }) =>
+                                  `relative cursor-default select-none py-2 pl-10 pr-4 ${
+                                    active
+                                      ? "bg-sakura-5 text-amber-900"
+                                      : "text-gray-900"
+                                  }`
+                                }
+                                value={value}
+                              >
+                                {({ selected }) => (
+                                  <>
+                                    <span
+                                      className={`block truncate ${
+                                        selected ? "font-medium" : "font-normal"
+                                      }`}
+                                    >
+                                      {value.AgeRange}
+                                    </span>
+                                    {selected ? (
+                                      <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-amber-600">
+                                        <CheckIcon
+                                          className="h-5 w-5"
+                                          aria-hidden="true"
+                                        />
+                                      </span>
+                                    ) : null}
+                                  </>
+                                )}
+                              </Listbox.Option>
+                            ))}
+                          </Listbox.Options>
+                        </Transition>
+                      </div>
+                    </Listbox>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  <label
+                    htmlFor="Message"
+                    className={`${DMSans.className} text-sm font-semibold leading-6 text-sakura-blue`}
+                  >
+                    Message
+                  </label>
+
+                  <textarea
+                    className="block w-full border-0 py-4 pl-4 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-slate-50 sm:text-sm sm:leading-6 rounded-2xl focus:outline-none focus-visible:border-slate-50 focus-visible:ring-2 focus-visible:ring-white/75 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+                    name="Message"
+                    placeholder="your message"
+                    cols={3}
+                    onChange={(event) => setValues(event.currentTarget.value)}
+                    required
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div className="w-5/12 relative z-10">
-              <figure className="sr-only md:not-sr-only py-10">
-                <Image
-                  src={FormImage}
-                  alt="form-image"
-                  className="w-full -ml-2"
-                  // width={500}
-                  // height={549}
-                />
-              </figure>
-            </div>
+
+              <div className="flex items-center justify-center mt-6 ">
+                <button
+                  type="submit"
+                  className="bg-gradient-to-b from-sakura-10 to-pink-600 px-6 py-2 rounded-2xl text-slate-50 "
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
           </div>
-          {/* <div className="relative w-full mx-8 md:mx-auto flex items-center mt-0 md:mt-10">
-            
-          </div> */}
+
+          <figure className="sr-only md:not-sr-only flex-initial w-full h-full z-10">
+            <Image
+              src={`/assets/BellflowerDeret_1.png`}
+              alt="form-image"
+              width={479}
+              height={549}
+            />
+          </figure>
         </div>
       </section>
 
@@ -420,38 +399,53 @@ export default function Revamp() {
         <div className="">
           <div className="flex flex-col justify-center items-center gap-y-[30px]">
             <div className="flex items-center justify-center">
-              <p className="dm-sans font-bold text-[34px] leading-5 text-sakura-brown text-center">
+              {/* <figure className="scale-80">
+                {React.createElement(Ornament, {
+                  width: "88px",
+                  height: "42px",
+                })}
+              </figure> */}
+              <p className=" text-[34px] leading-5 font-bold text-sakura-brown text-center">
                 Yang kamu Dapatkan dari
               </p>
+              {/* <figure className="scale-80">
+                {React.createElement(Ornament1, {
+                  width: "88px",
+                  height: "42px",
+                })}
+              </figure> */}
             </div>
             <figure>
               <Image
                 src={BasanthaImage}
                 alt="banner"
-                className="w-full h-auto"
+                width={357}
+                height={105}
               />
             </figure>
           </div>
 
           {/* desktop */}
-          <div className="hidden relative md:flex flex-col items-center justify-center pb-0 md:pb-72">
-            <figure className="absolute left-0 top-0 w-full h-fit">
+          <div className="hidden relatife md:flex flex-col items-center justify-center pb-0 md:pb-72">
+            <figure className="absolute left-0 top-40  w-full h-fit">
               <Image
-                className="w-full object-cover bg-no-repeat bg-center"
+                className="object-cover bg-no-repeat bg-center"
                 src={BasantaHeadBanner}
                 alt="banner"
+                width={1440}
+                height={760}
               />
             </figure>
             <BenefitSlider />
           </div>
         </div>
 
-        <div className="not-sr-only md:sr-only relative flex flex-col items-center justify-center pb-0 md:pb-80">
+        <div className="not-sr-only md:sr-only relatife flex flex-col items-center justify-center pb-0 md:pb-80">
           <BenefitSlider />
         </div>
 
         {/* slider for unit rumah */}
-        <div className="space-y-10 mt-8 md:mt-80 x3l:mt-72 x4l:mt-96">
+        <div className="space-y-10 mt-8 md:mt-80">
           <div className="flex flex-col items-center justify-center">
             <div className="flex items-baseline justify-center">
               <figure className="scale-80">
@@ -460,7 +454,7 @@ export default function Revamp() {
                   height: "42px",
                 })}
               </figure>
-              <h1 className="dm-serif font-bold text-2xl md:text-5xl text-sakura-brown text-center">
+              <h1 className="heading font-bold text-sakura-brown text-center">
                 Unit Rumah
               </h1>
               <figure className="scale-80">
@@ -599,7 +593,7 @@ export default function Revamp() {
       <section className="relative bg-sakura-100/90 block h-auto md:h-fit w-[360px] md:w-full">
         <figure className="w-full h-fit">
           <Image
-            className="w-full mix-blend-multiply object-cover bg-center bg-no-repeat"
+            className="mix-blend-multiply object-cover bg-center bg-no-repeat"
             src={BasantaClusterPromo}
             alt="promo_image"
             width={1440}
