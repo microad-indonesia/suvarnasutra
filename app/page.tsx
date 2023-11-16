@@ -122,8 +122,8 @@ export default function Revamp() {
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
 
       {/* Section Banner  */}
-      <section className="relative h-fit md:h-[760px] w-[360px] md:w-full pb-0 md:pb-40 mt-4 md:mt-0">
-        <div className="absolute mt-0 md:mt-10 -left-0 md:-left-0 h-fit inset-0 flex justify-between items-center mx-4 md:mx-10 gap-1 md:gap-4">
+      <section className="relative h-fit md:h-[840px] xl:h-[760px] w-full pb-0 md:pb-40 mt-0">
+        <div className="absolute mt-2 md:mt-6 xl:mt-10 -left-0 md:-left-0 h-fit inset-0 flex justify-between items-center mx-4 md:mx-6 xl:mx-10 gap-1 md:gap-4">
           {/* logo */}
           <div className="flex-1">
             <div className="flex items-center">
@@ -147,26 +147,34 @@ export default function Revamp() {
         </div>
 
         {/* title */}
-        <div className="absolute top-20 inset-x-0 flex justify-center z-20">
+        <div className="absolute top-16 md:top-24 xl:top-20 inset-x-0 flex justify-center z-20">
           <div className="flex-1">
             <div className="flex flex-col items-center justify-center space-y-3">
               <figure className="w-fit h-fit">
-                <Image src={TitleImage} alt="title" />
+                <Image
+                  src={TitleImage}
+                  alt="title"
+                  className="w-48 md:w-full mx-auto"
+                />
               </figure>
               <figure className="w-fit h-fit">
-                <Image src={SubtitleImage} alt="subtitle" />
+                <Image
+                  src={SubtitleImage}
+                  alt="subtitle"
+                  className="w-80 md:w-full mx-auto"
+                />
               </figure>
             </div>
           </div>
         </div>
 
-        <figure className="absolute bottom-10 inset-x-0 flex justify-center z-20">
+        <figure className="absolute bottom-40 md:bottom-20 xl:bottom-10 inset-x-0 flex justify-center z-20 w-[85%] md:w-full mx-auto">
           <Image src={GiftCard} alt="promo" />
         </figure>
 
         <figure className="w-full h-full">
           <Image
-            className="w-full object-cover bg-center bg-no-repeat"
+            className="w-full h-[100vh] xl:h-auto object-cover bg-center bg-no-repeat"
             src={HomeBanner}
             alt="banner"
           />
@@ -174,19 +182,19 @@ export default function Revamp() {
       </section>
 
       {/* Section Form */}
-      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-[320px] md:w-full my-6 md:my-0">
+      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-32 md:my-0 pb-10 xl:pb-0">
         <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
         <div className="container-sm">
-          <div className="relative flex flex-wrap items-center px-10 md:px-20">
-            <div className="w-7/12 relative z-20">
+          <div className="relative flex flex-wrap items-center px-0 md:px-20">
+            <div className="w-full xl:w-7/12 relative z-20">
               {/* form */}
-              <div className="box-form flex flex-col justify-center py-10 md:py-16 px-20 md:px-16 x3l:px-32 h-auto md:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
+              <div className="box-form flex flex-col justify-center py-8 md:py-16 px-6 md:px-16 x3l:px-32 h-auto md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
                 <div className="mb-5 md:mb-8 w-full text-center">
-                  <p className="dm-sans font-bold text-[2rem] leading-[2.25rem] text-sakura-blue">
+                  <p className="dm-sans font-bold text-3xl md:text-4  xl text-sakura-blue">
                     Silahkan Mengisi Form
                   </p>
 
-                  <p className="dm-sans font-medium text-lg text-[#6F6C90] mt-1">
+                  <p className="dm-sans font-medium text-base md:text-lg text-[#6F6C90] mt-1">
                     Untuk mendapatkan informasi mengenai produk
                   </p>
                 </div>
@@ -199,7 +207,7 @@ export default function Revamp() {
                   <div className="flex flex-wrap flex-col space-y-1 md:space-y-5">
                     {/* name and lastname */}
                     <div className="flex flex-row flex-wrap">
-                      <div className="w-full md:w-6/12 pr-0 md:pr-4">
+                      <div className="w-full md:w-6/12 pr-0 md:pr-4 mb-5 md:mb-0">
                         <div className="w-full space-y-1">
                           <label
                             htmlFor="FirstName"
@@ -221,7 +229,7 @@ export default function Revamp() {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full md:w-6/12 pl-0 md:pl-4">
+                      <div className="w-full md:w-6/12 pl-0 md:pl-4 mb-5 md:mb-0">
                         <div className="w-full space-y-1">
                           <label
                             htmlFor="LastName"
@@ -246,7 +254,7 @@ export default function Revamp() {
                     </div>
 
                     {/* email */}
-                    <div className="space-y-1">
+                    <div className="space-y-1 mb-5 md:mb-0">
                       <label
                         htmlFor="Email"
                         className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
@@ -268,7 +276,7 @@ export default function Revamp() {
 
                     {/* phone & age-range */}
                     <div className="flex flex-wrap flex-row">
-                      <div className="w-full md:w-6/12 pr-0 md:pr-4">
+                      <div className="w-full md:w-6/12 pr-0 md:pr-4 mb-5 md:mb-0">
                         <div className="w-full space-y-1">
                           <label
                             htmlFor="PhoneNumber"
@@ -293,7 +301,7 @@ export default function Revamp() {
                           </div>
                         </div>
                       </div>
-                      <div className="w-full md:w-6/12 pl-0 md:pl-4">
+                      <div className="w-full md:w-6/12 pl-0 md:pl-4 mb-5 md:mb-0">
                         <div className="relative w-full space-y-1">
                           <label
                             htmlFor="AgeRange"
@@ -374,7 +382,7 @@ export default function Revamp() {
                       </label>
 
                       <textarea
-                        className="block w-full border-0 py-4 pl-4 text-[#6F6C90] shadow-md ring-0 ring-inset ring-white placeholder:text-[#6F6C90] focus:ring-0 focus:ring-inset focus:ring-white text-sm md:text-base rounded-3xl focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
+                        className="block w-full border-0 py-4 pl-4 text-[#6F6C90] shadow-md ring-0 ring-inset ring-white placeholder:text-[#6F6C90] focus:ring-0 focus:ring-inset focus:ring-white text-sm md:text-base rounded-3xl focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white mb-5 md:mb-0"
                         name="Message"
                         placeholder="Your Message"
                         cols={3}
@@ -397,7 +405,7 @@ export default function Revamp() {
                 </form>
               </div>
             </div>
-            <div className="w-5/12 relative z-10">
+            <div className="hidden xl:block w-5/12 relative z-10">
               <figure className="sr-only md:not-sr-only py-10">
                 <Image
                   src={FormImage}
@@ -409,18 +417,15 @@ export default function Revamp() {
               </figure>
             </div>
           </div>
-          {/* <div className="relative w-full mx-8 md:mx-auto flex items-center mt-0 md:mt-10">
-            
-          </div> */}
         </div>
       </section>
 
       {/* unit rumah */}
-      <section className="cloud-section relative h-fit w-[360px] md:w-full mt-10">
-        <div className="">
-          <div className="flex flex-col justify-center items-center gap-y-[30px]">
+      <section className="cloud-section relative h-fit w-full mt-10">
+        <div className="box-benefit">
+          <div className="flex flex-col justify-center items-center gap-y-[16px] md:gap-y-[30px]">
             <div className="flex items-center justify-center">
-              <p className="dm-sans font-bold text-[34px] leading-5 text-sakura-brown text-center">
+              <p className="dm-sans font-bold text-2xl md:text-4xl text-sakura-brown text-center">
                 Yang kamu Dapatkan dari
               </p>
             </div>
@@ -428,16 +433,16 @@ export default function Revamp() {
               <Image
                 src={BasanthaImage}
                 alt="banner"
-                className="w-full h-auto"
+                className="w-60 md:w-3/4 xl:w-full h-auto mx-auto"
               />
             </figure>
           </div>
 
           {/* desktop */}
-          <div className="hidden relative md:flex flex-col items-center justify-center pb-0 md:pb-72">
+          <div className="hidden relative md:flex flex-col items-center justify-center pb-0 xl:pb-72">
             <figure className="absolute left-0 top-0 w-full h-fit">
               <Image
-                className="w-full object-cover bg-no-repeat bg-center"
+                className="w-full object-cover bg-no-repeat bg-center h-[70vh] xl:h-auto"
                 src={BasantaHeadBanner}
                 alt="banner"
               />
@@ -451,7 +456,7 @@ export default function Revamp() {
         </div>
 
         {/* slider for unit rumah */}
-        <div className="space-y-10 mt-8 md:mt-80 x3l:mt-72 x4l:mt-96">
+        <div className="box-unit space-y-10 mt-8 md:mt-80 x3l:mt-72 x4l:mt-96">
           <div className="flex flex-col items-center justify-center">
             <div className="flex items-baseline justify-center">
               <figure className="scale-80">
@@ -460,7 +465,7 @@ export default function Revamp() {
                   height: "42px",
                 })}
               </figure>
-              <h1 className="dm-serif font-bold text-2xl md:text-5xl text-sakura-brown text-center">
+              <h1 className="dm-serif font-bold text-4xl md:text-5xl text-sakura-brown text-center">
                 Unit Rumah
               </h1>
               <figure className="scale-80">
@@ -476,7 +481,7 @@ export default function Revamp() {
         </div>
 
         {/* fitur rumah */}
-        <div className="flex flex-col items-center justify-center gap-y-[30px]">
+        <div className="flex flex-col items-center justify-center gap-y-[30px] px-8 xl:px-0 py-6 xl:py-0">
           <div className="flex items-baseline justify-center">
             <figure className="scale-80">
               {React.createElement(Ornament, {
@@ -484,7 +489,7 @@ export default function Revamp() {
                 height: "42px",
               })}
             </figure>
-            <h1 className="heading font-bold text-sakura-brown text-center">
+            <h1 className="dm-serif font-bold text-4xl md:text-5xl text-sakura-brown text-center">
               Fitur Rumah
             </h1>
             <figure className="scale-80">
@@ -497,32 +502,32 @@ export default function Revamp() {
 
           {/* fitur komplek */}
           <div className="grid grid-cols-3 md:grid-cols-6 grid-flow-row gap-4">
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl ">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl ">
               <figure className="w-fit h-fit">
                 <Image src={Bene1} alt="benefit1" />
               </figure>
             </div>
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl ">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl ">
               <figure className="h-fit w-fit">
                 <Image src={Bene2} alt="benefit2" />
               </figure>
             </div>
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl ">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl ">
               <figure className="h-fit w-fit">
                 <Image src={Bene3} alt="benefit3" />
               </figure>
             </div>
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl p-4">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl">
               <figure className="w-fit h-fit">
                 <Image src={Bene4} alt="benefit4" />
               </figure>
             </div>
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl ">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl ">
               <figure className="w-fit h-fit">
                 <Image src={Bene5} alt="benefit5" />
               </figure>
             </div>
-            <div className="flex flex-col items-center justify-center w-[103] h-[124px] ring-2 ring-sakura-brown bg-white rounded-xl ">
+            <div className="flex flex-col items-center justify-center p-6 md:p-0 h-[100px] md:h-[124px] w-[100px] ring-2 ring-sakura-brown bg-white rounded-xl ">
               <figure className="w-fit hfit">
                 <Image src={Bene6} alt="benefit6" />
               </figure>
@@ -534,12 +539,12 @@ export default function Revamp() {
               <Image src={BfDeret} alt="bellflower-deret" />
             </figure>
 
-            <div className="bg-[#FAF8F8]/50 w-11/12 py-10 md:py-10 mx-auto mb-8 md:mb-20 shadow-lg rounded-b-3xl">
-              <p className="dm-sans text-[34px] leading-5 font-bold text-sakura-brown text-center mb-6">
+            <div className="bg-[#FAF8F8]/50 w-full md:w-11/12 py-10 md:py-10 mx-auto mb-8 md:mb-20 shadow-lg rounded-b-3xl">
+              <p className="dm-sans text-3xl md:text-4xl font-bold text-sakura-brown text-center mb-6">
                 Fasilitas Yang Kamu Dapatkan
               </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 place-items-baseline grid-flow-row gap-6 mx-0 md:mx-20 p-2 md:p-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 place-items-baseline grid-flow-row gap-6 mx-0 md:mx-20 p-4 md:p-4">
                 <div className="flex items-center gap-5">
                   <figure className="w-fit h-fit">
                     <Image src={Feat1} alt="benefit-1" />
@@ -600,26 +605,30 @@ export default function Revamp() {
       </section>
 
       {/* end promo */}
-      <section className="relative bg-[#F296AC]/60 block h-auto md:h-fit w-[360px] md:w-full">
+      <section className="relative bg-[#F296AC]/60 block h-auto md:h-[32vh] xl:h-fit w-full">
         <figure className="w-full h-fit">
           <Image
-            className="w-full mix-blend-multiply object-cover bg-center bg-no-repeat"
+            className="w-full h-[32vh] xl:h-auto mix-blend-multiply object-cover bg-center bg-no-repeat"
             src={BasantaClusterPromo}
             alt="promo_image"
             width={1440}
             height={341}
           />
         </figure>
-        <div className="w-full absolute bottom-0 top-0 flex flex-col md:flex-row flex-wrap justify-center items-center px-8 md:px-14 x3l:px-24">
-          <div className="w-9/12">
+        <div className="w-full absolute bottom-0 top-0 flex flex-col md:flex-row flex-wrap justify-center items-center px-4 md:px-14 x3l:px-24">
+          <div className="w-full xl:w-9/12 mt-8 xl:mt-0">
             <figure className="w-full h-fit">
-              <Image src={GiftCard} alt="form-image" className="md:w-[840px] x3l:w-[920px]" />
+              <Image
+                src={GiftCard}
+                alt="form-image"
+                className="w-full md:w-[85%] xl:w-[840px] x3l:w-[920px] mx-auto"
+              />
             </figure>
           </div>
-          <div className="w-full md:w-3/12 x3l:w-2/12 mt-4 md:mt-8">
+          <div className="w-full xl:w-2/12 mt-2 md:mt-4 xl:mt-8 pb-10 xl:pb-0 text-center xl:text-left">
             <a href="tel:02131103838">
-              <button className="dm-sans font-bold bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-5 py-4 rounded-full text-[12px] md:text-base xl:text-xl text-slate-50 w-full capitalize">
-                info lebih lanjut
+              <button className="dm-sans font-bold bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-5 py-3 rounded-full md:text-base xl:text-xl text-slate-50 w-52 xl:w-full mx-autocapitalize">
+                Info Lebih Lanjut
               </button>
             </a>
           </div>

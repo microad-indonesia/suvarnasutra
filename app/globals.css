@@ -44,12 +44,12 @@ p.card-content {
   @apply text-sm leading-[18px] md:text-base md:leading-5;
 }
 
-.slick-slider .slick-next {
+.box-benefit .slick-slider .slick-next {
   top: 47.5%;
   right: -30px;
 }
 
-.slick-slider .slick-prev {
+.box-benefit .slick-slider .slick-prev {
   top: 40%;
   left: -30px;
 }
