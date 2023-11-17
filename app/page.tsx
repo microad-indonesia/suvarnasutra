@@ -191,7 +191,7 @@ export default function Revamp() {
       </section>
 
       {/* Section Form */}
-      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-[254px] md:-mt-32 md:my-0 pb-10 xl:pb-0">
+      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-[254px] -md:-mt-32 md:my-0 pb-10 xl:pb-0">
         <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
         <div className="container-sm">
           <div className="relative flex flex-wrap items-center px-4 md:px-20">
