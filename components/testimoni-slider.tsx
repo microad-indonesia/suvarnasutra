@@ -81,7 +81,7 @@ export default function SliderComponents() {
           infinite: true,
           dots: true,
           arrows: false,
-          autoplay: true,
+          // autoplay: true,
         },
       },
     ],
@@ -91,8 +91,8 @@ export default function SliderComponents() {
       <div className="block max-w-sm md:max-w-2xl lg:max-w-5xl xl:max-w-7xl my-1 sm:my-2 xl:my-10">
         <Slider {...settings}>
           {/* Bloom done */}
-          <div className="bg-transparant rounded-xl p-4 md:p-8 w-full h-fit">
-            <div className="flex flex-row flex-wrap justify-evenly items-center">
+          <div className="bg-transparant rounded-xl p-0 md:p-8 w-full h-fit">
+            <div className="flex flex-row flex-wrap px-4 md:px-0 justify-evenly items-center">
               <div className="w-full xl:w-5/12 mb-4 xl:mb-0">
                 <div className="flex-initial">
                   <figure className="w-full h-fit">
@@ -106,8 +106,95 @@ export default function SliderComponents() {
                   </figure>
                 </div>
               </div>
-              <div className="w-full xl:w-2/12 mb-5 md:mb-0">
-                <div className="flex-initial space-y-6 max-w-[200px] md:max-w-[170px] mt-3 md:mt-0 pl-5">
+              <div className="w-full xl:w-2/12 mb-1 md:mb-0">
+                <div className="flex flex-wrap md:hidden items-center px-2 mt-3">
+                  <div className="w-6/12">
+                    <figure className="w-fit h-fit mb-4">
+                      <Image
+                        src={LogoBloom}
+                        alt="logo-bloom"
+                        width={130}
+                        height={44}
+                      />
+                    </figure>
+                  </div>
+                  <div className="w-6/12">
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LT : 72 m² (6x12)
+                    </p>
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LB : 87 m²
+                    </p>
+                  </div>
+                  <div className="w-full flex flex-wrap mt-2">
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit1, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          3 KT
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit2, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          3 KM
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit3, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 WALK IN CLOSET
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit4, {
+                          width: "50px",
+                          height: "20px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 MOBIL
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit5, {
+                          width: "48px",
+                          height: "35px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 MOTOR
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden xl:flex flex-col flex-initial space-y-6 max-w-[200px] md:max-w-[170px] mt-3 md:mt-0 pl-5">
                   <div className="space-y-2">
                     <figure className="w-fit h-fit -ml-4 mb-4">
                       <Image
@@ -223,8 +310,8 @@ export default function SliderComponents() {
           </div>
 
           {/* Burnet */}
-          <div className="bg-transparant rounded-xl p-4 md:p-8 w-full h-fit">
-            <div className="flex flex-row flex-wrap justify-start items-center">
+          <div className="bg-transparant rounded-xl p-0 md:p-8 w-full h-fit">
+            <div className="flex flex-row flex-wrap px-4 md:px-0 justify-start items-center">
               <div className="w-full xl:w-5/12 mb-8 xl:mb-0">
                 <div className="flex-initial">
                   <figure className="w-full h-fit">
@@ -238,8 +325,95 @@ export default function SliderComponents() {
                   </figure>
                 </div>
               </div>
-              <div className="full xl:w-2/12 mb-5 md:mb-0">
-                <div className="flex-initial space-y-6 max-w-[200px] md:max-w-[170px] mt-3 md:mt-0 pl-5">
+              <div className="w-full xl:w-2/12 mb-1 md:mb-0">
+                <div className="flex flex-wrap md:hidden items-center px-2 mt-3">
+                  <div className="w-6/12">
+                    <figure className="w-fit h-fit mb-4">
+                      <Image
+                        src={LogoBurnet}
+                        alt="logo-burnet"
+                        width={130}
+                        height={44}
+                      />
+                    </figure>
+                  </div>
+                  <div className="w-6/12">
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LT : 84 m² (7x12)
+                    </p>
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LB : 101 m²
+                    </p>
+                  </div>
+                  <div className="w-full flex flex-wrap mt-2">
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit1, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          3 KT
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit2, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          3 KM
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit3, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 WALK IN CLOSET
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit4, {
+                          width: "50px",
+                          height: "20px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 MOBIL
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit4, {
+                          width: "50px",
+                          height: "20px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          2 MOBIL
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden xl:flex flex-col flex-initial space-y-6 max-w-[200px] md:max-w-[170px] mt-3 md:mt-0 pl-5">
                   <div className="space-y-2">
                     <figure className="w-fit h-fit -ml-4 mb-4">
                       <Image
@@ -355,8 +529,8 @@ export default function SliderComponents() {
           </div>
 
           {/* Bellflower */}
-          <div className="bg-transparant  rounded-xl p-4 md:p-8 w-full h-fit">
-            <div className="flex flex-row flex-wrap justify-evenly items-center">
+          <div className="bg-transparant  rounded-xl p-0 md:p-8 w-full h-fit">
+            <div className="flex flex-row flex-wrap px-4 md:px-0 justify-evenly items-center">
               <div className="w-full xl:w-5/12 mb-8 xl:mb-0">
                 <div className="flex-initial">
                   <figure className="w-full h-fit">
@@ -370,8 +544,81 @@ export default function SliderComponents() {
                   </figure>
                 </div>
               </div>
-              <div className="w-full xl:w-2/12">
-                <div className="flex-initial space-y-6 max-w-[170px] mt-3 md:mt-0 pl-5">
+              <div className="w-full xl:w-2/12 mb-1 md:mb-0">
+                <div className="flex flex-wrap md:hidden items-center px-2 mt-3">
+                  <div className="w-6/12">
+                    <figure className="w-fit h-fit mb-4">
+                      <Image
+                        src={LogoBellflower}
+                        alt="logo-bellflower"
+                        className="w-36 xl:w-auto"
+                      />
+                    </figure>
+                  </div>
+                  <div className="w-6/12">
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LT : 96 m² (8x12)
+                    </p>
+                    <p className="dm-sans font-medium text-[14px] md:text-base text-sakura-brown">
+                      LB : 122 m²
+                    </p>
+                  </div>
+                  <div className="w-full flex flex-wrap mt-2">
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit1, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          4+1 KT
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit2, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          3+1 KM
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit3, {
+                          width: "46px",
+                          height: "37px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[12px] md:text-base text-sakura-brown">
+                          1 WALK IN CLOSET
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                      <div className="w-4/12">
+                        {React.createElement(Unit4, {
+                          width: "50px",
+                          height: "20px",
+                        })}
+                      </div>
+                      <div className="w-8/12 pl-2">
+                        <p className="dm-sans text[14px] md:text-base text-sakura-brown">
+                          2 MOBIL
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="hidden xl:flex flex-col flex-initial space-y-6 max-w-[200px] md:max-w-[170px] mt-3 md:mt-0 pl-5">
                   <div className="space-y-2">
                     <figure className="w-fit h-fit -ml-4 mb-4">
                       <Image

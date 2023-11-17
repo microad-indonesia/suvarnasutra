@@ -188,7 +188,7 @@ export default function Revamp() {
           <div className="relative flex flex-wrap items-center px-0 md:px-20">
             <div className="w-full xl:w-7/12 relative z-20">
               {/* form */}
-              <div className="box-form flex flex-col justify-center py-8 md:py-16 px-6 md:px-16 x3l:px-32 h-auto md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
+              <div className="box-form bg-none flex flex-col justify-center py-8 md:py-16 px-6 md:px-16 x3l:px-32 h-auto md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
                 <div className="mb-5 md:mb-8 w-full text-center">
                   <p className="dm-sans font-bold text-3xl md:text-4  xl text-sakura-blue">
                     Silahkan Mengisi Form
@@ -481,7 +481,7 @@ export default function Revamp() {
         </div>
 
         {/* fitur rumah */}
-        <div className="flex flex-col items-center justify-center gap-y-[30px] px-8 xl:px-0 py-6 xl:py-0">
+        <div className="flex flex-col items-center justify-center gap-y-[30px] px-8 xl:px-0 py-6 xl:py-0 mt-8 md:mt-10">
           <div className="flex items-baseline justify-center">
             <figure className="scale-80">
               {React.createElement(Ornament, {
@@ -546,16 +546,16 @@ export default function Revamp() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 place-items-baseline grid-flow-row gap-6 mx-0 md:mx-20 p-4 md:p-4">
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-12 md:w-16 h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
-                    Dekat Dengan Tol Jakarta-Tangerang
+                    Dekat Tol Jakarta-Tangerang
                   </p>
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-16 h-fit">
                     <Image src={Feat2} alt="benefit-2" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
@@ -564,7 +564,7 @@ export default function Revamp() {
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-16 h-fit">
                     <Image src={Feat3} alt="benefit-3" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
@@ -573,7 +573,7 @@ export default function Revamp() {
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-16 h-fit">
                     <Image src={Feat4} alt="benefit-4" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
@@ -582,7 +582,7 @@ export default function Revamp() {
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-16 h-fit">
                     <Image src={Feat5} alt="benefit-5" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
@@ -591,7 +591,7 @@ export default function Revamp() {
                 </div>
 
                 <div className="flex items-center gap-5">
-                  <figure className="w-fit h-fit">
+                  <figure className="w-16 h-fit">
                     <Image src={Feat6} alt="benefit-6" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
@@ -615,7 +615,7 @@ export default function Revamp() {
             height={341}
           />
         </figure>
-        <div className="w-full absolute bottom-0 top-0 flex flex-col md:flex-row flex-wrap justify-center items-center px-4 md:px-14 x3l:px-24">
+        <div className="w-full absolute bottom-0 top-0 flex flex-col md:flex-row flex-nowrap md:flex-wrap justify-center items-center px-4 md:px-14 x3l:px-24">
           <div className="w-full xl:w-9/12 mt-8 xl:mt-0">
             <figure className="w-full h-fit">
               <Image
