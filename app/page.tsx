@@ -546,7 +546,7 @@ export default function Revamp() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 place-items-baseline grid-flow-row gap-6 mx-0 md:mx-20 p-4 md:p-4">
                 <div className="flex items-center gap-5">
-                  <figure className="w-12 md:w-16 h-fit">
+                  <figure className="w-16 md:w-16 h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
                   <p className="dm-sans text-[14px] md:text-base text-black">
