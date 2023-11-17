@@ -103,7 +103,7 @@ export default function BenefitSlider() {
     <section className="relative">
       <div className="block max-w-sm md:max-w-2xl xl:max-w-5xl x3l:max-w-7xl my-8 md:my-10 x3l:my-14">
         <Slider {...settings}>
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex flex-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure>
                 <Image src={BenefitImage1} alt="img-1" width={88} height={88} />
@@ -119,7 +119,7 @@ export default function BenefitSlider() {
             </p>
           </div>
 
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex flex-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure>
                 <Image src={BenefitImage2} alt="img-1" width={88} height={88} />
@@ -134,7 +134,7 @@ export default function BenefitSlider() {
             </p>
           </div>
 
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex fle-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure>
                 <Image src={BenefitImage3} alt="img-1" width={88} height={88} />
@@ -151,7 +151,7 @@ export default function BenefitSlider() {
             </p>
           </div>
 
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex flex-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure className="w-fit h-fit">
                 <Image src={BenefitImage4} alt="img-4" width={88} height={88} />
@@ -167,7 +167,7 @@ export default function BenefitSlider() {
             </p>
           </div>
 
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex flex-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure className="w-fit h-fit">
                 <Image src={BenefitImage5} alt="img-5" width={88} height={88} />
@@ -183,7 +183,7 @@ export default function BenefitSlider() {
             </p>
           </div>
 
-          <div className="p-4">
+          <div className="p-0 md:p-4">
             <div className="flex flex-wrap justify-center lg:justify-start items-center md:items-end gap-x-4 min-h-[90px]">
               <figure className="w-fit h-fit">
                 <Image src={BenefitImage6} alt="img-6" width={88} height={88} />

@@ -71,6 +71,8 @@ section.cloud-section {
   background-image: url("/assets/bg-image-cloud-1.webp");
   background-size: cover;
   background-repeat: no-repeat;
+
+  @apply bg-none;
 }
 
 .box-form {
