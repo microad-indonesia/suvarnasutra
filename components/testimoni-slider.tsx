@@ -99,7 +99,7 @@ export default function SliderComponents() {
                     <Image
                       src={HomeImage}
                       alt="denah-rumah-bloom"
-                      className="w-full xl:w-auto"
+                      // className="w-full xl:w-auto"
                       // width={457}
                       // height={524}
                     />
@@ -318,7 +318,7 @@ export default function SliderComponents() {
                     <Image
                       src={HomeImageBurnet}
                       alt="denah-rumah-burnet"
-                      className="w-full xl:w-auto"
+                      // className="w-full xl:w-auto"
                       // width={457}
                       // height={524}
                     />
@@ -385,7 +385,7 @@ export default function SliderComponents() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
+                    {/* <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
                       <div className="w-4/12">
                         {React.createElement(Unit4, {
                           width: "50px",
@@ -397,7 +397,7 @@ export default function SliderComponents() {
                           1 MOBIL
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="flex flex-wrap flex-row items-center w-6/12 mb-4">
                       <div className="w-4/12">
                         {React.createElement(Unit4, {
@@ -472,7 +472,7 @@ export default function SliderComponents() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap flex-row items-center">
+                    {/* <div className="flex flex-wrap flex-row items-center">
                       <div className="w-5/12">
                         {React.createElement(Unit4, {
                           width: "50px",
@@ -484,7 +484,7 @@ export default function SliderComponents() {
                           1 MOBIL
                         </p>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="flex flex-wrap flex-row items-center">
                       <div className="w-5/12">
                         {React.createElement(Unit4, {
@@ -537,7 +537,7 @@ export default function SliderComponents() {
                     <Image
                       src={HomeImageBellflower}
                       alt="denah-rumah-bellflower"
-                      className="w-full xl:w-auto"
+                      // className="w-full xl:w-auto"
                       // width={457}
                       // height={524}
                     />
