@@ -562,11 +562,8 @@ export default function Revamp() {
                   <figure className="w-16 md:w-16 h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
-                  {/* <p className="dm-sans text-[14px] md:text-base text-black">
-                    Dekat Tol Jakarta-Tangerang
-                  </p> */}
                   <p className="dm-sans text-[14px] md:text-base text-black">
-                    Tol Jakarta-Tangerang
+                    Dekat Tol Jakarta-Tangerang
                   </p>
                 </div>
 
