@@ -71,8 +71,6 @@ section.cloud-section {
   background-image: url("/assets/bg-image-cloud-1.webp");
   background-size: cover;
   background-repeat: no-repeat;
-
-  @apply bg-none;
 }
 
 .box-form {
@@ -83,19 +81,8 @@ section.cloud-section {
 
 @media (max-width: 460px) {
   .box-form {
-    /* background: rgb(244, 238, 242);
-    background: linear-gradient(
-      179deg,
-      rgba(244, 238, 242, 1) 72%,
-      rgba(206, 201, 204, 1) 95%
-    ); */
-    /* fill: rgba(250, 248, 248, 0.6);
-    stroke-width: 1px;
-    stroke: rgba(239, 240, 246, 0.6);
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    backdrop-filter: blur(4px); */
     background-image: url("/assets/box-form-sm.svg");
-    background-size: containt;
+    background-size: cover;
     background-repeat: repeat;
     background-position: center;
     border-radius: 30px 30px 43px 43px;

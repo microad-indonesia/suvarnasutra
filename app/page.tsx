@@ -194,7 +194,7 @@ export default function Revamp() {
       <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-[254px] -md:-mt-32 md:my-0 pb-10 xl:pb-0">
         <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
         <div className="container-sm">
-          <div className="relative flex flex-wrap items-center px-4 md:px-20">
+          <div className="relative flex flex-wrap items-center px-2 md:px-20">
             <div className="w-full xl:w-7/12 relative z-20">
               {/* form */}
               <div className="box-form bg-none flex flex-col justify-center py-8 md:py-16 px-[10px] md:px-16 x3l:px-32 h-[90vh] md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
