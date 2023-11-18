@@ -11,6 +11,7 @@ import { CheckIcon, ChevronDownIcon } from "@heroicons/react/solid";
 import { useSearchParams } from "next/navigation";
 import SliderComponents from "~/components/testimoni-slider";
 import HomeBanner from "~/public/assets/page-banner.png";
+import HomeBannerMobile from "~/public/assets/suvarna-mobile.png";
 import GiftCard from "~/public/assets/special-gift.png";
 import FormImage from "~/public/assets/BellflowerDeret_1.png";
 import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
@@ -136,8 +137,8 @@ export default function Revamp() {
           {/* phone */}
           <div className="flex-1">
             <a className="flex items-end justify-end" href="tel:02131103838">
-              <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-6 py-2 rounded-full text-slate-50 inline-flex items-center gap-2 text-[8px] md:text-base">
-                <figure className="w-[19px] h-[18px]">
+              <button className="bg-gradient-to-b from-sakura-10 to-pink-600 px-2 md:px-6 py-2 rounded-full text-slate-50 inline-flex items-center gap-1 text-[6px] md:text-base">
+                <figure className="w-[6px] md:w-[19px] h-[6px] md:h-[18px]">
                   <PhoneIcon />
                 </figure>
                 (021) 31103838
@@ -147,7 +148,7 @@ export default function Revamp() {
         </div>
 
         {/* title */}
-        <div className="absolute top-16 md:top-24 xl:top-20 inset-x-0 flex justify-center z-20">
+        <div className="hidden absolute top-16 md:top-24 xl:top-20 inset-x-0 md:flex justify-center z-20">
           <div className="flex-1">
             <div className="flex flex-col items-center justify-center space-y-3">
               <figure className="w-fit h-fit">
@@ -168,27 +169,35 @@ export default function Revamp() {
           </div>
         </div>
 
-        <figure className="absolute bottom-40 md:bottom-20 xl:bottom-10 inset-x-0 flex justify-center z-20 w-[85%] md:w-full mx-auto">
+        <figure className="hidden absolute bottom-40 md:bottom-20 xl:bottom-10 inset-x-0 md:flex justify-center z-20 w-[85%] md:w-full mx-auto">
           <Image src={GiftCard} alt="promo" />
         </figure>
 
-        <figure className="w-full h-full">
+        <figure className="hidden md:block w-full h-full">
           <Image
             className="w-full h-[100vh] xl:h-auto object-cover bg-center bg-no-repeat"
             src={HomeBanner}
             alt="banner"
           />
         </figure>
+
+        <figure className="block md:hidden w-full h-full">
+          <Image
+            className="w-full h-fit xl:h-auto object-cover bg-center bg-no-repeat"
+            src={HomeBannerMobile}
+            alt="banner-mobile"
+          />
+        </figure>
       </section>
 
       {/* Section Form */}
-      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-32 md:my-0 pb-10 xl:pb-0">
+      <section className="relative h-auto xl:h-[700px] x3l:h-[800px] x4l:h-[840px] w-full -mt-[254px] -md:-mt-32 md:my-0 pb-10 xl:pb-0">
         <div className="bg-sakura-5 absolute inset-0 blur-md"></div>
         <div className="container-sm">
-          <div className="relative flex flex-wrap items-center px-0 md:px-20">
+          <div className="relative flex flex-wrap items-center px-4 md:px-20">
             <div className="w-full xl:w-7/12 relative z-20">
               {/* form */}
-              <div className="box-form bg-none flex flex-col justify-center py-8 md:py-16 px-6 md:px-16 x3l:px-32 h-auto md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
+              <div className="box-form bg-none flex flex-col justify-center py-8 md:py-16 px-[10px] md:px-16 x3l:px-32 h-[90vh] md:h-[67vh] xl:h-[80vh] x3l:h-[99vh] x4l:h-[80vh] x5l:h-[99vh]">
                 <div className="mb-5 md:mb-8 w-full text-center">
                   <p className="dm-sans font-bold text-3xl md:text-4  xl text-sakura-blue">
                     Silahkan Mengisi Form
@@ -206,7 +215,7 @@ export default function Revamp() {
                 >
                   <div className="flex flex-wrap flex-col space-y-1 md:space-y-5">
                     {/* name and lastname */}
-                    <div className="flex flex-row flex-wrap">
+                    <div className="flex flex-row gap-[10px] md:gap-6">
                       <div className="w-full md:w-6/12 pr-0 md:pr-4 mb-5 md:mb-0">
                         <div className="w-full space-y-1">
                           <label
@@ -254,28 +263,32 @@ export default function Revamp() {
                     </div>
 
                     {/* email */}
-                    <div className="space-y-1 mb-5 md:mb-0">
-                      <label
-                        htmlFor="Email"
-                        className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
-                      >
-                        Email
-                      </label>
-                      <div className="flex rounded-3xl shadow-md ring-0 ring-inset ring-white bg-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white sm:max-w-2xl">
-                        <input
-                          className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
-                          type="email"
-                          name="Email"
-                          placeholder="Your Email"
-                          onChange={(event) =>
-                            setValues(event.currentTarget.value)
-                          }
-                        />
+                    <div className="flex flex-row gap-[10px] md:gap-6">
+                      <div className="w-full mb-5 md:mb-0">
+                        <div className="w-full space-y-1">
+                          <label
+                            htmlFor="Email"
+                            className="dm-sans text-sm font-semibold leading-6 text-sakura-blue"
+                          >
+                            Email
+                          </label>
+                          <div className="flex rounded-3xl shadow-md ring-0 ring-inset ring-white bg-white focus-within:ring-0 focus-within:ring-inset focus-within:ring-white sm:max-w-2xl">
+                            <input
+                              className="dm-sans block rounded-3xl flex-1 border-0 py-3 pl-4 text-gray-900 placeholder:text-[#6F6C90] focus:ring-0 text-sm md:text-base focus:outline-none focus-visible:border-white focus-visible:ring-0 focus-visible:ring-white focus-visible:ring-offset-0 focus-visible:ring-offset-white"
+                              type="email"
+                              name="Email"
+                              placeholder="Your Email"
+                              onChange={(event) =>
+                                setValues(event.currentTarget.value)
+                              }
+                            />
+                          </div>
+                        </div>
                       </div>
                     </div>
 
                     {/* phone & age-range */}
-                    <div className="flex flex-wrap flex-row">
+                    <div className="flex flex-row gap-[10px]">
                       <div className="w-full md:w-6/12 pr-0 md:pr-4 mb-5 md:mb-0">
                         <div className="w-full space-y-1">
                           <label
@@ -549,8 +562,11 @@ export default function Revamp() {
                   <figure className="w-16 md:w-16 h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
-                  <p className="dm-sans text-[14px] md:text-base text-black">
+                  {/* <p className="dm-sans text-[14px] md:text-base text-black">
                     Dekat Tol Jakarta-Tangerang
+                  </p> */}
+                  <p className="dm-sans text-[14px] md:text-base text-black">
+                    Tol Jakarta-Tangerang
                   </p>
                 </div>
 
