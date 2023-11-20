@@ -8,19 +8,19 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 // unit rumah bloom
-import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/Denah-Rumah.png";
+import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/image-unit.webp";
 import Denah1 from "~/public/assets/Unit-Rumah/The-bloom/Denah-1.png";
 import Denah2 from "~/public/assets/Unit-Rumah/The-bloom/Denah-2.png";
 import LogoBloom from "~/public/assets/Unit-Rumah/The-bloom/logo-1.svg";
 
 // unit rumah bellflower
-import HomeImageBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Image-Rumah.png";
+import HomeImageBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/image-unit.webp";
 import Denah1Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-1.png";
 import Denah2Bellflower from "~/public/assets/Unit-Rumah/The-Bellflower/Denah-2.png";
 import LogoBellflower from "~/public/assets/Unit-Rumah/The-Bellflower/logo-2.svg";
 
 // unit rumah burnet
-import HomeImageBurnet from "~/public/assets/Unit-Rumah/The-burnet/Image-Rumah.png";
+import HomeImageBurnet from "~/public/assets/Unit-Rumah/The-burnet/image-unit.webp";
 import Denah1Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-1.png";
 import Denah2Burnet from "~/public/assets/Unit-Rumah/The-burnet/Denah-2.png";
 import LogoBurnet from "~/public/assets/Unit-Rumah/The-burnet/logo-3.svg";
