@@ -8,7 +8,7 @@ import Slider from "react-slick";
 import Image from "next/image";
 
 // unit rumah bloom
-import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/image-unit.webp";
+import HomeImage from "~/public/assets/Unit-Rumah/The-bloom/unit-image.png";
 import Denah1 from "~/public/assets/Unit-Rumah/The-bloom/Denah-1.png";
 import Denah2 from "~/public/assets/Unit-Rumah/The-bloom/Denah-2.png";
 import LogoBloom from "~/public/assets/Unit-Rumah/The-bloom/logo-1.svg";
