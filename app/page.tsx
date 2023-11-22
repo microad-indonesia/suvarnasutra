@@ -16,7 +16,6 @@ import GiftCard from "~/public/assets/special-gift.png";
 import FormImage from "~/public/assets/BellflowerDeret_1.png";
 import BasantaClusterPromo from "~/public/assets/Basanta_Cluster_Promo.png";
 import BasantaHeadBanner from "~/public/assets/perumahan-2.png";
-// import CloudLong from "~/public/assets/cloud-long.png";
 import BasanthaImage from "~/public/assets/basanta/Logo-Basantha-Color-1.png";
 import LogoColor from "~/public/assets/suvarna-sutera-logo-color.svg";
 import TitleImage from "~/public/assets/title.png";
@@ -24,6 +23,7 @@ import SubtitleImage from "~/public/assets/a-new.png";
 import { PhoneIcon } from "@heroicons/react/outline";
 import axios from "axios";
 import BenefitSlider from "~/components/page-component/benefit-slider";
+import Script from "next/script";
 
 // benefit
 import Bene1 from "~/public/assets/benefit/Group-5.png";
@@ -42,13 +42,6 @@ import Feat4 from "~/public/assets/facilities/Group-4.png";
 import Feat5 from "~/public/assets/facilities/Group-2.png";
 import Feat6 from "~/public/assets/facilities/Group-5.png";
 import { Ornament, Ornament1 } from "~/components/icons";
-// import { DM_Sans } from "next/font/google";
-
-// const DMSans = DM_Sans({
-//   style: ["normal"],
-//   subsets: ["latin"],
-//   display: "swap",
-// });
 
 // age-range
 const rangeAge = [
@@ -83,9 +76,6 @@ export default function Revamp() {
     for (const [key, value] of searchEntries) {
       temp.push({ [key]: value });
     }
-    // const transform = temp?.map((item: any) => ({
-    //   [item.key]: item.value,
-    // }));
 
     setQueryUrl(temp);
   }, []);
@@ -121,6 +111,19 @@ export default function Revamp() {
   return (
     <>
       <NextSeo title="suvarnasutra.co.id" titleTemplate="%s" description="" />
+      <Script
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-T8FTYZXKG6', {
+              page_path: window.location.pathname,
+            });
+          `,
+        }}
+      />
 
       {/* Section Banner  */}
       <section className="relative h-fit md:h-[840px] xl:h-[760px] w-full pb-0 md:pb-40 mt-0">
@@ -562,9 +565,6 @@ export default function Revamp() {
                   <figure className="w-16 md:w-16 h-fit">
                     <Image src={Feat1} alt="benefit-1" />
                   </figure>
-                  {/* <p className="dm-sans text-[14px] md:text-base text-black">
-                    Dekat Tol Jakarta-Tangerang
-                  </p> */}
                   <p className="dm-sans text-[14px] md:text-base text-black">
                     Tol Jakarta-Tangerang
                   </p>
